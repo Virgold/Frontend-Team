@@ -1,6 +1,8 @@
 import Categories from "@/components/Categories";
+import DreamJobBanner from "@/components/DreamJobBanner";
 import Hero from "@/components/Hero";
 import JobSteps from "@/components/JobSteps";
+import PartnersSlider from "@/components/PartnersSlider";
 import TrustedSection from "@/components/TrustedSection";
 import { Button } from "@/components/ui/button";
 
@@ -20,7 +22,7 @@ const Homepage = () => {
       {/* Job listing */}
       <div>
         <div>
-          <div className="w-[40%] mt-8 py-8 text-center mx-auto">
+          <div className="w-[40%] my-16 py-8 text-center mx-auto">
             <span className="mb-12 text-[#00347B] bg-[#E4ECF6] py-4 px-8 rounded-3xl">Coming Soon 🥳 🥳</span>
             <p className="text-4xl mt-8 mb-8">Job Listings will appear here as soon as it is available</p>
             <Button className="text-white hover:text-black hover:bg-secondary rounded-3xl">Explore Jobs</Button>
@@ -32,13 +34,17 @@ const Homepage = () => {
       <div>
         <div className="py-4 text-center">
           <div>
-            <h3>Our Wonderful Partners</h3>
-            <p>Here's a list of our amazing partners over the years</p>
+            <h3 className="text-4xl mb-8">Our Wonderful Partners</h3>
+            <p className="font-normal text-xl mb-4">Here's a list of our amazing partners over the years</p>
             {/* Partners Slider */}
-            {/* TODO:: */}
+            <div className="w-full mx-auto px-[5%]">
+              <PartnersSlider />
+            </div>
           </div>
         </div>
       </div>
+
+      <DreamJobBanner />
     </div>
   )
 }

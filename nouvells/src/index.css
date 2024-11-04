@@ -101,6 +101,12 @@ body {
   font-style: normal;
 }
 
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 
 @layer base {
   * {
