@@ -3,13 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Menu } from 'lucide-react';
 import { NavLink, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { navLinks } from "@/constants";
 
-export const navLinks = [
-  { href: '/jobs', label: 'Jobs' },
-  { href: '/company', label: 'Company' },
-  { href: '/services', label: 'Service' },
-  { href: '/pricing', label: 'Pricing' }
-];
 
 const authButtons = [
   { href: '/login', label: 'Login', className: 'bg-secondary' },
@@ -51,8 +46,8 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   return (
-    <div className="container w-full max-w-full border border-red-300">
-      <div className="w-full min-w-full max-w-full flex justify-between py-3 lg:py-6 border border-gray-300">
+    <div className="container w-full max-w-full">
+      <div className="w-full min-w-full max-w-full flex justify-between py-3 lg:py-6">
         <div>
           <div>Nouvels</div>
           <p>Let every project thrive</p>
