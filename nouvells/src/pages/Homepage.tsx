@@ -30,7 +30,7 @@ const Homepage = () => {
 
       {/* Partners */}
       <div>
-        <div>
+        <div className="py-4 text-center">
           <div>
             <h3>Our Wonderful Partners</h3>
             <p>Here's a list of our amazing partners over the years</p>

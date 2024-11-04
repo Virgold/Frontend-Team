@@ -4,7 +4,7 @@ import { Menu } from 'lucide-react';
 import { NavLink, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
-const navLinks = [
+export const navLinks = [
   { href: '/jobs', label: 'Jobs' },
   { href: '/company', label: 'Company' },
   { href: '/services', label: 'Service' },
