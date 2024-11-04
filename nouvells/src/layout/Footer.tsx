@@ -1,6 +1,11 @@
 import { Button } from "@/components/ui/button";
 import personImage from '@/assets/homepage/happyGirl.svg'
 import bgPattern from '@/assets/homepage/job-pattern-bg.svg'
+import { navLinks } from "./Navbar";
+import { Link, NavLink } from "react-router-dom";
+
+import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -10,10 +15,8 @@ const Footer = () => {
           style={{
             backgroundImage: `url(${bgPattern})`,
             backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            opacity: 0.2
-          }}
-        ></div>
+            backgroundPosition: 'center', opacity: 0.2
+          }} ></div>
         <div className="relative z-10 flex items-center justify-between container bg-[#325E95] !pr-0 rounded-3xl">
           <div className="text-white space-y-4 max-w p-4">
             <h4 className="text-3xl md:text-4xl font-semibold">
@@ -43,15 +46,42 @@ const Footer = () => {
         </div>
       </section>
 
-      <footer>
-        <div>
-          <div>logo</div>
-          <div>links</div>
-          <div>icons</div>
-        </div>
-        <div>
-          <div>copyright</div>
-          <div>other links</div>
+      <footer className="w-full">
+        <div className="container mx-auto w-full !pr-0 !pl-0 py-8">
+          <div className="flex border-b-2 justify-between items-center mt-12 py-8">
+            <div>logo</div>
+            <div>
+              <ul className={`w-full flex flex-col md:w-auto md:flex-row text-right gap-4 md:gap-8 navgrou`}>
+                {navLinks.map(({ href, label }) => (
+                  <li key={href}>
+                    <NavLink to={href} className="block md:inline p-4 hover:text-blue-600 transition-colors">
+                      {label}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              {/* TODO: add real links */}
+              <ul className="flex gap-2">
+                <li className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center"><FaFacebook size={20} /></li>
+                <li className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center"><FaXTwitter size={20} /></li>
+                <li className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center"><FaInstagram size={20} /></li>
+                <li className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center"><FaLinkedinIn size={20} /></li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex border-t-2 justify-between py-8">
+            <div>&copy; 2024 Nouvells. All rights reserved.</div>
+            <div>
+              <ul className="flex gap-4">
+                <li><Link to={'/terms'}>Terms of Service</Link></li>
+                <li><Link to={'/privacy'}>Privacy Policy</Link></li>
+                <li><Link to={'/cookies'}>Cookies Policy</Link></li>
+                <li><Link to={'/partners'}>Partners</Link></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </footer>
     </>
