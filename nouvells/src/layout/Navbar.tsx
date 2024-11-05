@@ -11,7 +11,7 @@ const authButtons = [
   { href: '/signup', label: 'Sign up', className: 'text-secondary' }
 ];
 
-const NavigationLinks = ({ className = '' }) => {
+const NavigationLinks = ({ className = '', toggleMenu }: { className?: string; toggleMenu?: () => void }) => {
   const navigation = useNavigate();
 
   return (
@@ -19,7 +19,7 @@ const NavigationLinks = ({ className = '' }) => {
       <ul className={`container w-full flex flex-col md:w-auto md:flex-row text-right gap-4 md:gap-8 navgroup ${className}`}>
         {navLinks.map(({ href, label }) => (
           <li key={href}>
-            <NavLink to={href} className="block md:inline p-4 hover:text-blue-600 transition-colors">
+            <NavLink onClick={toggleMenu} to={href} className="block md:inline p-4 hover:text-blue-600 transition-colors">
               {label}
             </NavLink>
           </li>
@@ -30,7 +30,10 @@ const NavigationLinks = ({ className = '' }) => {
           <Button
             key={href}
             className={cn(`text-sm lg:text-lg font-medium px-8 py-4 rounded-full`, className || '')}
-            onClick={() => navigation(href)}
+            onClick={() => {
+              navigation(href);
+              toggleMenu?.();
+            }}
           >
             {label}
           </Button>
@@ -65,7 +68,7 @@ const Navbar = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <nav className="block md:hidden absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-slate-50 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%] z-50">
-            <NavigationLinks />
+            <NavigationLinks toggleMenu={toggleMenu} />
           </nav>
         )}
       </div>
