@@ -64,7 +64,7 @@ const Navbar = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="block md:hidden absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-slate-50 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%]">
+          <nav className="block md:hidden absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-slate-50 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%] z-50">
             <NavigationLinks />
           </nav>
         )}
