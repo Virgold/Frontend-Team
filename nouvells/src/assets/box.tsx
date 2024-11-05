@@ -1,7 +1,7 @@
 const Box = () => {
     return (
         <div>
-            <svg width="1648" height="893" viewBox="0 0 1648 893" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-full min-w-full h-auto">
+            <svg width="1648" height="893" viewBox="0 0 1648 893" fill="none" xmlns="http://www.w3.org/2000/svg" className={`w-full max-w-full min-w-full h-auto`}>
                 <mask id="path-1-inside-1_228_381" fill="white">
                     <path d="M41.7183 0H153.428V111.709H41.7183V0Z" />
                 </mask>
