@@ -5,6 +5,8 @@ import { cn } from "@/lib/utils";
 import JobSeekerIcon from "@/assets/jobSeekerIcon";
 import HiringManager from "@/assets/hiringManager";
 
+import bolt from '@/assets/homepage/bolt.svg';
+
 const searchList = [
     { href: '/jobs/uiux', label: 'UI/UX Design', active: 'true' },
     { href: '/jobs/content-writers', label: 'Content Writer' },
@@ -31,8 +33,8 @@ const Hero = () => {
                 <div className="w-full h-full absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center rounded">
                     <div className="max-w-4xl w-full min-h-[70%] py-5 mx-auto flex flex-col">
                         <div className="text-center mb-4">
-                            <span className="px-8 lg:mb-16 py-3 rounded-3xl bg-red-300 text-sm">
-                                Mobile app launching soon
+                            <span className="w-full px-4 lg:px-8 lg:mb-16 py-3 rounded-3xl bg-accent text-[#002A64] text-sm">
+                                <img className="inline" src={bolt} alt="hhh" /> <span className="px-3">Mobile app launching soon</span> 🚀
                             </span>
                         </div>
                         <h1 className="text-lg md:text-3xl lg:text-5xl lg:leading-[75.4px] text-center font-normal lg:font-medium">

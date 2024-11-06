@@ -61,13 +61,13 @@ const Navbar = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:block absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-slate-50 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%]">
+        <nav className="hidden md:block absolute top-[100%] p-4 md:p-0 left-0 right-0 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%]">
           <NavigationLinks />
         </nav>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="block md:hidden absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-slate-50 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%] z-50">
+          <nav className="block md:hidden absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-accent md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%] z-50">
             <NavigationLinks toggleMenu={toggleMenu} />
           </nav>
         )}

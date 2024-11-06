@@ -44,7 +44,11 @@
     --radius: 0.5rem;
 
     --primary: 215, 51%, 36%;
+    --light-blue: 215, 100%, 20%;
+    --accent: 0, 0%, 96%;
     --background: 0, 0%, 100%;
+    --footer-background: 0, 0%, 26%;
+    --text: 0, 0%, 8%;
   }
 
   .dark {
@@ -74,6 +78,11 @@
     --chart-5: 340 75% 55%;
 
     --primary: 215, 51%, 36%;
+    --accent: 0, 0%, 96%;
+    /* --footer-background: 0, 0%, 26%; */
+    --footer-background: 0, 0%, 26%;
+    --footer-background: 0, 0%, 26%;
+    /* --card-bg: 0, 0%, 96%; */
   }
 }
 

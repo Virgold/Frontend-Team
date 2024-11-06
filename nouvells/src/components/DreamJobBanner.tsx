@@ -11,7 +11,7 @@ const DreamJobBanner = () => {
                     backgroundSize: 'cover',
                     backgroundPosition: 'center', opacity: 0.2
                 }} ></div>
-            <div className="relative z-10 flex items-center justify-between container bg-[#325E95] !pr-0 rounded-3xl">
+            <div className="relative z-10 flex items-center justify-between container bg-primary !pr-0 rounded-3xl">
                 <div className="text-white space-y-4 max-w p-4">
                     <h4 className="text-3xl md:text-4xl font-semibold">
                         Find Your Dream Jobs In No Time.

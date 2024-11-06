@@ -21,9 +21,9 @@ const categoriesData = [
 const Categories = () => {
     return (
         <>
-            <h2 className="text-center text-4xl font-medium mb-8">Browse Categories</h2>
+            <h2 className="text-center text-3xl lg:text-4xl font-medium mb-8">Browse Categories</h2>
             <div className="container mx-auto mt-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] lg:grid-cols-3 gap-6">
                     {categoriesData.map((categoryData, index) => (
                         <CategoryCard key={index} categoryData={categoryData} />
                     ))}

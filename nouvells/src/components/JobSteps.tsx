@@ -44,17 +44,16 @@ const JobSteps = () => {
 
 const JobStepCard = ({ imagePath, label, text, alt }: { imagePath: string, label: string, text: string, alt?: string }) => {
     return (
-        <div className="flex flex-col items-center bg-slate-200 rounded-lg py-4 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <div className="flex flex-col items-center bg-accent rounded-lg py-4 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
             <div className="mb-4 w-full flex items-center justify-center">
                 <img
                     src={imagePath}
                     alt={alt || 'Job steps guide card'}
-                    // className="w-24 h-24 object-contain"
                     className="w-96 h-96 object-contain"
                 />
             </div>
             <div className='w-full text-left px-[5%]'>
-                <h3 className="text-3xl font-semibold text-gray-800 mb-2">{label}</h3>
+                <h3 className="text-2xl lg:text-3xl font-semibold text-gray-800 mb-2">{label}</h3>
                 <p className="text-[#5B5B5B]">{text}</p>
             </div>
         </div>

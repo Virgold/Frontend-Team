@@ -6,6 +6,8 @@ import PartnersSlider from "@/components/PartnersSlider";
 import TrustedSection from "@/components/TrustedSection";
 import { Button } from "@/components/ui/button";
 
+import bolt from '@/assets/homepage/bolt.svg';
+
 const Homepage = () => {
   return (
     <div className="container min-w-full max-w-full w-full mx-auto">
@@ -18,8 +20,8 @@ const Homepage = () => {
       </section>
       <section className="section">
         <div className="w-full">
-          <div className="w-1/2 max-w-1/2 mx-auto">
-            <h2 className="text-center font-medium text-4xl text-[#3D3D3D]">Find your Dream Job in 4 easy steps</h2>
+          <div className="lg:w-1/2 lg:max-w-1/2 mx-auto">
+            <h2 className="text-center font-medium text-2xl lg:text-4xl text-[#3D3D3D]">Find your Dream Job in 4 easy steps</h2>
           </div>
         </div>
         <JobSteps />
@@ -33,8 +35,8 @@ const Homepage = () => {
       <section className="section">
         <div className="flex justify-center">
           <div className="w-full md:w-[60%] lg:w-[40%] my-8 md:my-16 py-8 text-center">
-            <span className="block text-sm md:text-base lg:text-lg text-[#00347B] bg-[#E4ECF6] py-3 px-6 md:px-8 rounded-3xl">
-              Coming Soon 🥳 🥳
+            <span className="text-sm md:text-base lg:text-lg text-[#00347B] bg-accent py-3 px-3 md:px-6 rounded-3xl w-fit">
+              <img className="inline" src={bolt} alt={'bolt icon'} /> <span className="px-3">Coming Soon</span> 🥳 🥳
             </span>
             <p className="text-lg md:text-2xl lg:text-4xl mt-6 md:mt-8 mb-6 md:mb-8">
               Job Listings will appear here as soon as they are available
