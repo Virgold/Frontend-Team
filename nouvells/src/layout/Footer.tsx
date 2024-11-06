@@ -7,7 +7,7 @@ import { navLinks } from "@/constants";
 const Footer = () => {
   return (
     <footer className="w-full section text-white lg:text-black">
-      <div className="container mx-auto w-full lg:py-8 bg-[#434343] lg:bg-transparent rounded-3xl">
+      <div className="container mx-auto w-full lg:py-8 text-background bg-footer lg:text-text lg:bg-transparent rounded-3xl">
         <div className="flex flex-col justify-start items-start md:flex-row border-b-2 lg:justify-between lg:items-center mt-12 py-8 gap-8">
           <div className="hidden lg:block text-center md:text-left">logo</div>
           <div>
