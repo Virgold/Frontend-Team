@@ -24,7 +24,7 @@ const PartnersSlider = () => {
             //     dynamicBullets: true,
             //     dynamicMainBullets: 3,
             // }}
-            
+
             autoplay={{
                 delay: 3000,
                 disableOnInteraction: false,
@@ -38,7 +38,6 @@ const PartnersSlider = () => {
                 },
             }}
             modules={[Pagination, Autoplay]}
-            className="partners-slide"
         >
             <SwiperSlide className="partners-slider__slide swiper-no-margin-left">
                 <img src={ApplePay} alt="Apple Pay" />
