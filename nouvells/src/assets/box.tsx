@@ -1,7 +1,7 @@
-const Box = () => {
+const Box = ({ className = '' }: { className?: string }) => {
     return (
         <div>
-            <svg width="1648" height="893" viewBox="0 0 1648 893" fill="none" xmlns="http://www.w3.org/2000/svg" className={`w-full max-w-full min-w-full h-auto`}>
+            <svg width="1648" height="893" viewBox="0 0 1648 893" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
                 <mask id="path-1-inside-1_228_381" fill="white">
                     <path d="M41.7183 0H153.428V111.709H41.7183V0Z" />
                 </mask>
@@ -623,6 +623,33 @@ const Box = () => {
                         <stop stopColor="#424242" stopOpacity="0.3" />
                         <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
                     </linearGradient>
+                    <linearGradient id="paint108_linear_228_381" x1="1438.09" y1="781.291" x2="1438.09" y2="893" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#424242" stopOpacity="0.3" />
+                        <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
+                    </linearGradient>
+                    <linearGradient id="paint109_linear_228_381" x1="1549.8" y1="781.291" x2="1549.8" y2="893" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#424242" stopOpacity="0.3" />
+                        <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
+                    </linearGradient>
+
+                    <linearGradient id="paint108_linear_228_381" x1="1438.09" y1="781.291" x2="1438.09" y2="893" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#424242" stopOpacity="0.3" />
+                        <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
+                    </linearGradient>
+                    <linearGradient id="paint109_linear_228_381" x1="1549.8" y1="781.291" x2="1549.8" y2="893" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#424242" stopOpacity="0.3" />
+                        <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
+                    </linearGradient>
+
+                    <linearGradient id="paint108_linear_228_381" x1="1438.09" y1="781.291" x2="1438.09" y2="893" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#424242" stopOpacity="0.3" />
+                        <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
+                    </linearGradient>
+                    <linearGradient id="paint109_linear_228_381" x1="1549.8" y1="781.291" x2="1549.8" y2="893" gradientUnits="userSpaceOnUse">
+                        <stop stopColor="#424242" stopOpacity="0.3" />
+                        <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
+                    </linearGradient>
+
                     <linearGradient id="paint108_linear_228_381" x1="1438.09" y1="781.291" x2="1438.09" y2="893" gradientUnits="userSpaceOnUse">
                         <stop stopColor="#424242" stopOpacity="0.3" />
                         <stop offset="1" stopColor="#7B7B7B" stopOpacity="0.41" />
