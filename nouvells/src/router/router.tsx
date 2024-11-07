@@ -23,6 +23,11 @@ const router = createBrowserRouter([
                 // element: <About />,
             },
             {
+                path: 'services',
+                element: '<div>Services</div>',
+                errorElement: "<div className='bg-red-400'>error</div>"
+            },
+            {
                 path: "dashboard",
                 // element: <Dashboard />,
                 children: [
