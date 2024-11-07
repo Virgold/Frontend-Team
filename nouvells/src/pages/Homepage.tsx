@@ -11,30 +11,27 @@ import bolt from '@/assets/homepage/bolt.svg';
 const Homepage = () => {
   return (
     <div className="min-w-full max-w-full w-full mx-auto">
-      <section className="section">
-        <Hero />
-      </section>
+      <Hero />
 
-      <section className="section">
-        <TrustedSection />
-      </section>
-      <section className="section">
-        <div className="w-full">
-          <div className="lg:w-1/2 lg:max-w-1/2 mx-auto">
-            <h2 className="text-center font-medium text-2xl lg:text-4xl text-[#3D3D3D]">Find your Dream Job in 4 easy steps</h2>
+      <TrustedSection />
+
+      <section className="container">
+        <div className="sub-container">
+          <div className="w-full">
+            <div className="lg:w-1/2 lg:max-w-1/2 mx-auto">
+              <h2 className="text-center font-medium text-2xl lg:text-4xl text-[#3D3D3D]">Find your Dream Job in 4 easy steps</h2>
+            </div>
           </div>
+          <JobSteps />
         </div>
-        <JobSteps />
       </section>
 
-      <section className="section">
-        <Categories />
-      </section>
+      <Categories />
 
       {/* Job listing */}
-      <section className="section">
-        <div className="flex justify-center">
-          <div className="w-full md:w-[60%] lg:w-[40%] my-8 md:my-16 py-8 text-center">
+      <div className="flex justify-center">
+        <div className=" text-center container">
+          <div className="sub-container">
             <span className="text-sm md:text-base lg:text-lg text-[#00347B] bg-accent py-3 px-3 md:px-6 rounded-3xl w-fit">
               <img className="inline" src={bolt} alt={'bolt icon'} /> <span className="px-3">Coming Soon</span> 🥳 🥳
             </span>
@@ -46,26 +43,24 @@ const Homepage = () => {
             </Button>
           </div>
         </div>
-      </section>
+      </div>
 
 
       {/* Partners */}
-      <section className="section">
-        <div className="py- text-center">
-          <div className="max-w-screen-lg mx-auto px-4 md:px-6 lg:px-8">
+      <div className="text-center">
+        {/* <div className="max-w-screen-lg mx-auto px-4 md:px-6 lg:px-8"> */}
+        <div className="container">
+          <div className="sub-container">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 md:mb-6 lg:mb-8">
               Our Wonderful Partners
             </h3>
             <p className="font-normal text-base md:text-lg lg:text-xl mb-3 md:mb-4 lg:mb-6">
               Here's a list of our amazing partners over the years
             </p>
-            {/* Partners Slider */}
-            <div className="w-full mx-auto">
-              <PartnersSlider />
-            </div>
+            <PartnersSlider />
           </div>
         </div>
-      </section>
+      </div>
 
 
       <DreamJobBanner />
