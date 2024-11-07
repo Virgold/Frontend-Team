@@ -117,8 +117,8 @@ body {
 
 .section {
   padding: 2rem 1rem;
-  margin: 0 auto;
-  max-width: 1200px;
+  /* margin: 0 auto; */
+  /* max-width: 1200px; */
   /* background-color: #f9f9f9; */
   border-radius: 8px;
 }
@@ -140,12 +140,15 @@ body {
 }
 
 @layer utilities {
-  .container {
-    @apply relative flex-1 px-[5%];
+    .container {
+    /* @apply relative flex-1 px-[5%] mx-auto py-[2%] w-full; */
+    @apply relative flex-1 w-full mx-auto;
+    padding-left: clamp(1rem, 5%, 2rem);
+    padding-right: clamp(1rem, 4%, 2rem);
   }
 
   .sub-container {
-    @apply mx-auto flex size-full flex-col py-10;
+    @apply mx-auto size-full py-10;
   }
 }
 
