@@ -49,30 +49,32 @@ const Navbar = () => {
   const toggleMenu = () => setIsMenuOpen(prev => !prev);
 
   return (
-    <div className="container w-full max-w-full">
-      <div className="w-full min-w-full max-w-full flex justify-between py-3 lg:py-6">
-        <div>
-          <div>Nouvels</div>
-          <p>Let every project thrive</p>
-        </div>
+    <header className=" w-full max-w-full">
+      <div className="container">
+        <div className="sub-container flex justify-between py-3 lg:py-6">
+          <div>
+            <div>Nouvels</div>
+            <p>Let every project thrive</p>
+          </div>
 
-        <div className="absolute top-4 right-6 md:hidden">
-          <Menu onClick={toggleMenu} />
-        </div>
+          <div className="absolute top-4 right-6 md:hidden">
+            <Menu onClick={toggleMenu} />
+          </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:block absolute top-[100%] p-4 md:p-0 left-0 right-0 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%]">
-          <NavigationLinks />
-        </nav>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <nav className="block md:hidden absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-accent md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%] z-50">
-            <NavigationLinks toggleMenu={toggleMenu} />
+          {/* Desktop Navigation */}
+          <nav className="hidden md:block absolute top-[100%] p-4 md:p-0 left-0 right-0 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%]">
+            <NavigationLinks />
           </nav>
-        )}
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <nav className="block md:hidden absolute top-[100%] p-4 md:p-0 left-0 right-0 bg-accent md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%] z-50">
+              <NavigationLinks toggleMenu={toggleMenu} />
+            </nav>
+          )}
+        </div>
       </div>
-    </div>
+    </header>
   );
 };
 
