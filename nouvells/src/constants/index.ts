@@ -8,6 +8,6 @@ export const initialState: ThemeProviderState = {
 export const navLinks = [
     { href: '/jobs', label: 'Jobs' },
     { href: '/company', label: 'Company' },
-    { href: '/services', label: 'Service' },
+    { href: '/services', label: 'Services' },
     { href: '/pricing', label: 'Pricing' }
 ];

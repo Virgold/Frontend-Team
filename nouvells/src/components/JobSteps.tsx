@@ -33,7 +33,7 @@ const cardsDetails = [
 const JobSteps = () => {
     return (
         <div className="py-8">
-            <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
                 {cardsDetails.map(({ imagePath, label, text, alt }, index) => (
                     <JobStepCard key={index} imagePath={imagePath} label={label} text={text} alt={alt} />
                 ))}

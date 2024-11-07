@@ -10,7 +10,7 @@ import bolt from '@/assets/homepage/bolt.svg';
 
 const Homepage = () => {
   return (
-    <div className="container min-w-full max-w-full w-full mx-auto">
+    <div className="min-w-full max-w-full w-full mx-auto">
       <section className="section">
         <Hero />
       </section>
