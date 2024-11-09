@@ -29,20 +29,16 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' }) => {
     };
 
     return (
-        <div className="overflow-hidden min-h-screen -top-4 relative">
+        <div className="overflow-hidden -top-4 relative">
             <div
                 className={cn(
-                    "absolute inset-0 z-10 w-full h-full overflow-hidden sub-container top-0",
-                    { 'h-[70vh]': page !== 'home' }
-                )}
+                    "absolute inset-0 z-10 w-full overflow-hidden sub-container top-0 left-0 right-0 bottom-0")}
             >
-                <Box className={`w-full h-full top-${length * 20}`} />
+                <Box className={`w-full h-auto`} />
             </div>
 
 
-            <div className={cn("container min-h-screen z-20 flex items-center justify-center",
-                { 'min-h-[50vh]': page !== 'home' }
-            )}>
+            <div className={cn("container z-20 flex items-center justify-center")}>
                 <div className="sub-container flex items-center justify-center rounded">
                     <div className="max-w-4xl w-full py-5 mx-auto flex flex-col">
                         <div className="text-center mb-4">
