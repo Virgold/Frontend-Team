@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Layout from "@/layout/Layout";
 import Homepage from "@/pages/Homepage";
 import NotFound from "@/pages/NotFound";
+import JobsPage from "@/pages/JobsPage";
 import ServicesPage from "@/pages/ServicesPage";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
@@ -25,8 +26,12 @@ const router = createBrowserRouter([
             },
             {
                 path: 'jobs',
-                element: <ServicesPage />,
+                element: <JobsPage />,
                 // errorElement: "<div className='bg-red-400'>error</div>"
+            },
+            {
+                path: 'services',
+                element: <ServicesPage />
             },
             {
                 path: "dashboard",
