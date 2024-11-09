@@ -27,7 +27,7 @@ export const JOB_CATEGORIES = [
 ];
 
 export enum JOB_DISPLAY_COUNT {
-    large = 5,
+    large = 9,
     tablet = 6,
     small = 3
 }
