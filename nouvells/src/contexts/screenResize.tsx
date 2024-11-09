@@ -1,7 +1,7 @@
 import { JOB_DISPLAY_COUNT } from "@/constants";
 import { useCallback, useEffect, useState } from "react";
 
-export const useDisplayCount = () => {
+const useDisplayCount = () => {
     const getInitialCount = useCallback(() => {
         if (typeof window === 'undefined') return JOB_DISPLAY_COUNT.small;
         return window.innerWidth >= 1024
@@ -21,3 +21,5 @@ export const useDisplayCount = () => {
 
     return [displayCount, setDisplayCount] as const;
 };
+
+export default useDisplayCount;

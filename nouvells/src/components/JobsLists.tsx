@@ -10,7 +10,8 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
-import { useDisplayCount } from '@/contexts/screenResize';
+import { JOB_CATEGORIES as CATEGORIES } from '@/constants';
+import useDisplayCount from '@/contexts/screenResize';
 
 
 interface Location {
@@ -85,7 +86,7 @@ const JobCardSkeleton = () => {
 };
 
 
-const JobsList = ({ category = '' }: { category?: string }) => {
+const JobsList = ({ categoryIndex = 0 }: { categoryIndex?: number }) => {
     const [jobs, setJobs] = useState<Job[] | null>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -98,7 +99,7 @@ const JobsList = ({ category = '' }: { category?: string }) => {
             setLoading(true);
             setError(null);
             try {
-                const result = await getJobs(category);
+                const result = await getJobs(categoryIndex);
                 setJobs(result as Job[]);
             } catch (e) {
                 setError('Failed to fetch jobs. Please try again later.');
@@ -110,7 +111,7 @@ const JobsList = ({ category = '' }: { category?: string }) => {
         };
 
         fetchJobs();
-    }, [category]);
+    }, [categoryIndex]);
 
     const handleLoadMore = () => {
         const increment = window.innerWidth >= 1024 ? 6 : 2;
@@ -120,7 +121,7 @@ const JobsList = ({ category = '' }: { category?: string }) => {
     return (
         <section className="container">
             <h1 className="sub-container font-medium text-pretty text-3xl mb-8">
-                {category || 'All Jobs'}
+                {CATEGORIES[categoryIndex] || 'All Jobs'}
             </h1>
             <div className="sub-container">
                 {error && (
