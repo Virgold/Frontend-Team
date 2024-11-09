@@ -8,24 +8,22 @@ import { JOB_CATEGORIES as CATEGORIES } from '@/constants';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-const CategoriesSwiper = ({ activeCategory, setActiveCategory }: { activeCategory: string; setActiveCategory: Dispatch<SetStateAction<string>> }) => {
+import { Button } from './ui/button';
+
+const CategoriesSwiper = ({ activeCategory, setActiveCategory }: { activeCategory: number; setActiveCategory: Dispatch<SetStateAction<number>> }) => {
     const swiperRef = useRef(null);
     const [searchParams, setSearchParams] = useSearchParams();
 
     useEffect(() => {
-        // searchParams
-    }, [])
-
-    useEffect(() => {
-        if (activeCategory) {
-            searchParams.set('category', activeCategory.toLowerCase());
+        if (typeof activeCategory === 'number') {
+            searchParams.set('category', CATEGORIES[activeCategory]);
             setSearchParams(searchParams);
         }
     }, [activeCategory, searchParams, setSearchParams]);
 
-    const handleJobsCategory = (e: { target: { innerText: SetStateAction<string>; }; }) => {
-        setActiveCategory(e.target.innerText);
-    }
+    const handleCategoryClick = (index: number) => {
+        setActiveCategory(index);
+    };
 
     return (
         <div className="container bg-re-500">
@@ -65,18 +63,23 @@ const CategoriesSwiper = ({ activeCategory, setActiveCategory }: { activeCategor
                     }}
                 >
                     {CATEGORIES.map((category, index) => (
-                        <SwiperSlide key={index} className={cn(`text-center rounded-full bg-blue-800 overflow-auto`, {
-                            'bg-blue-700 text-white': index === 0,
-                            'text-gray-700 bg-slate-300 hover:text-blue-700 transition-colors': index !== 0
-                        })}>
-                            {/* <a
-                                href="#"
-                                className={`inline-block whitespace-nowrap px-6 py-3`}
+                        <SwiperSlide
+                            key={category}
+                            className="!w-auto"
+                        >
+                            <Button
+                                variant="ghost"
+                                onClick={() => handleCategoryClick(index)}
+                                className={cn(
+                                    'rounded-full px-6 py-3 h-auto font-medium transition-all duration-200 whitespace-nowrap',
+                                    {
+                                        'bg-primary text-white hover:bg-primary/90': index === activeCategory,
+                                        'bg-secondary text-gray-700 hover:bg-secondary/80 hover:text-primary': index !== activeCategory
+                                    }
+                                )}
                             >
                                 {category}
-                            </a> */}
-                            {/* <Link className={`inline-block whitespace-nowrap px-6 py-3`} to={page + '/' + category}>{category}</Link> */}
-                            <button onClick={handleJobsCategory}>{category}</button>
+                            </Button>
                         </SwiperSlide>
                     ))}
                 </Swiper>
