@@ -1,0 +1,129 @@
+[
+    {
+        "icon": "src/assets/servicesPage/services/bolt.svg",
+        "title": "Graphic & Design",
+        "description": "Offering roles in branding, web design, and multimedia. These positions are crucial for effective communication and visual storytelling in various industries."
+    },
+    {
+        "icon": "src/assets/servicesPage/services/fire.svg",
+        "title": "Programming & Tech",
+        "description": "Programming and tech careers offer dynamic opportunities in software development, cybersecurity, and data analysis. These roles drive innovation and are essential for digital transformation across industries."
+    },
+    {
+        "icon": "src/assets/servicesPage/services/star.svg",
+        "title": "Digital Marketing",
+        "description": "Digital marketing careers encompass SEO, social media, and content creation. These roles are vital for driving online engagement, brand visibility, and customer acquisition in today's digital landscape."
+    },
+    {
+        "title": "Business Consulting",
+        "description": "Providing strategic guidance to enhance business operations, optimize costs, and maximize profitability. Ideal for those seeking to drive business growth and transformation."
+    },
+    {
+        "title": "Writing & Translation",
+        "description": "Encompassing creative writing, copywriting, and translation services. These positions are key to effective communication across cultures and media channels."
+    },
+    {
+        "title": "Customer Service",
+        "description": "Roles in customer service help manage client relationships, troubleshoot issues, and ensure customer satisfaction across various communication channels."
+    },
+    {
+        "title": "Video & Animation",
+        "description": "Careers in video editing, animation, and motion graphics bring creative concepts to life. Essential for visual storytelling and multimedia campaigns."
+    },
+    {
+        "title": "IT & Networking",
+        "description": "Providing support in network infrastructure, system administration, and IT troubleshooting. Crucial for maintaining organizational technology and security."
+    },
+    {
+        "title": "Music & Audio",
+        "description": "Offering roles in audio production, music composition, and sound engineering. These positions support multimedia projects across music, film, and digital media."
+    },
+    {
+        "title": "Sales & Marketing",
+        "description": "Specializing in sales strategy, lead generation, and customer engagement. These roles drive revenue and market growth for businesses across industries."
+    },
+    {
+        "title": "Project Management",
+        "description": "Providing oversight and coordination for projects to ensure they are completed on time and within budget. Essential for effective team and resource management."
+    },
+    {
+        "title": "Engineering & Architecture",
+        "description": "Offering roles in civil, mechanical, and electrical engineering. These careers focus on designing and building physical structures and systems."
+    },
+    {
+        "title": "Education & Training",
+        "description": "Providing educational resources and training programs across various fields. Essential for professional development and skill enhancement."
+    },
+    {
+        "title": "Legal Services",
+        "description": "Specializing in legal advice, documentation, and representation. Critical for ensuring compliance and protecting clients' rights and interests."
+    },
+    {
+        "title": "Accounting & Finance",
+        "description": "Roles in financial planning, accounting, and investment analysis. These careers are essential for organizational financial health and growth."
+    },
+    {
+        "title": "Human Resources",
+        "description": "Focusing on recruitment, employee relations, and organizational culture. Key roles for managing and enhancing workforce capabilities."
+    },
+    {
+        "title": "Health & Wellness",
+        "description": "Providing services in health coaching, wellness programs, and mental health support. Crucial for promoting individual and community health."
+    },
+    {
+        "title": "Software Development",
+        "description": "Specializing in web, mobile, and desktop application development. These roles are central to building and maintaining digital products and services."
+    },
+    {
+        "title": "Data Science & Analytics",
+        "description": "Focusing on data collection, analysis, and interpretation to guide business decisions. Crucial for leveraging data-driven insights."
+    },
+    {
+        "title": "Game Development",
+        "description": "Creating interactive games and simulations. Includes roles in game design, programming, and 3D modeling to create engaging user experiences."
+    },
+    {
+        "title": "Real Estate Services",
+        "description": "Providing support in property management, leasing, and real estate consulting. Key roles in the housing and commercial property industries."
+    },
+    {
+        "title": "Event Planning & Management",
+        "description": "Coordinating events, from weddings to corporate meetings. Essential for seamless event execution and memorable experiences."
+    },
+    {
+        "title": "E-commerce Management",
+        "description": "Specializing in online store management, product listing, and order fulfillment. Critical for successful online retail operations."
+    },
+    {
+        "title": "Scientific Research",
+        "description": "Conducting research in fields such as biology, chemistry, and physics. These roles contribute to scientific knowledge and innovation."
+    },
+    {
+        "title": "Fashion & Lifestyle",
+        "description": "Offering roles in fashion design, styling, and lifestyle consulting. These careers help shape trends and personal brand identity."
+    },
+    {
+        "title": "Interior Design",
+        "description": "Specializing in space planning, decor, and aesthetics to create functional and beautiful interiors for homes and businesses."
+    },
+    {
+        "title": "Web Development",
+        "description": "Building and maintaining websites and web applications. Involves roles in front-end, back-end, and full-stack development."
+    },
+    {
+        "title": "Social Media Management",
+        "description": "Creating and curating content, engaging audiences, and building brand presence across social media platforms."
+    },
+    {
+        "title": "Public Relations",
+        "description": "Focusing on brand reputation, media relations, and public engagement. Crucial for managing public perception and communication strategies."
+    },
+    {
+        "title": "Supply Chain Management",
+        "description": "Coordinating the movement of goods and services, ensuring timely delivery and quality. Essential for efficient product lifecycle management."
+    },
+    {
+        "title": "Content Creation",
+        "description": "Specializing in creating written, visual, and multimedia content to engage audiences and promote brands across digital platforms."
+    }
+]
