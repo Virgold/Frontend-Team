@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Menu } from 'lucide-react';
 import { NavLink, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { navLinks } from "@/constants";
+import { NAVLINKS } from "@/constants";
 
 
 const authButtons = [
@@ -17,7 +17,7 @@ const NavigationLinks = ({ className = '', toggleMenu }: { className?: string; t
   return (
     <div className="w-full flex items-center flex-col md:flex-row justify-between gap-4">
       <ul className={`container w-full flex flex-col md:w-auto md:flex-row text-right gap-4 md:gap-8 navgroup ${className}`}>
-        {navLinks.map(({ href, label }) => (
+        {NAVLINKS.map(({ href, label }) => (
           <li key={href}>
             <NavLink onClick={toggleMenu} to={href} className="block md:inline p-4 hover:text-blue-600 transition-colors">
               {label}
@@ -52,10 +52,10 @@ const Navbar = () => {
     <header className=" w-full max-w-full">
       <div className="container">
         <div className="sub-container flex justify-between py-3 lg:py-6">
-          <div>
-            <div>Nouvels</div>
+          <NavLink to={'/'}>
+            <h2>Nouvels</h2>
             <p>Let every project thrive</p>
-          </div>
+          </NavLink>
 
           <div className="absolute top-4 right-6 md:hidden">
             <Menu onClick={toggleMenu} />
