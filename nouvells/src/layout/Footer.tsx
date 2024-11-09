@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
-import { navLinks } from "@/constants";
+import { NAVLINKS } from "@/constants";
 
 const Footer = () => {
   return (
@@ -15,7 +15,7 @@ const Footer = () => {
             {/* Navigation Links */}
             <div className="self-start lg:self-auto" >
               <ul className="flex flex-col md:flex-row text-center md:text-right gap-4 md:gap-8">
-                {navLinks.map(({ href, label }) => (
+                {NAVLINKS.map(({ href, label }) => (
                   <li key={href}>
                     <NavLink
                       to={href}

@@ -1,0 +1,928 @@
+[
+    {
+        "id": "job_001",
+        "title": "UI/UX Designer",
+        "company": "Odeyor Pay",
+        "category": "Graphics & Design",
+        "sub_category": "UI/UX Design",
+        "budget": 400,
+        "currency": "USD",
+        "description": "Looking for a UI/UX designer to develop our app and mobile app...",
+        "requirements": [
+            "3+ years of experience in UI/UX design",
+            "Proficiency in Figma or Adobe XD",
+            "Portfolio of previous work",
+            "Experience with mobile app design"
+        ],
+        "skills": [
+            "UI Design",
+            "UX Design",
+            "Figma",
+            "Mobile Design",
+            "Prototyping"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-5"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-08T15:30:00Z",
+        "application_deadline": "2024-11-30T23:59:59Z",
+        "applications_count": 12
+    },
+    {
+        "id": "job_002",
+        "title": "Product Designer",
+        "company": "TechCorp",
+        "category": "Graphics & Design",
+        "sub_category": "Product Design",
+        "budget": 500,
+        "currency": "USD",
+        "description": "Seeking a product designer to help with our SaaS platform...",
+        "requirements": [
+            "5+ years of product design experience",
+            "Experience with SaaS products",
+            "Strong portfolio"
+        ],
+        "skills": [
+            "Product Design",
+            "UI Design",
+            "UX Research",
+            "Design Systems"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "hybrid",
+            "city": "San Francisco",
+            "country": "USA",
+            "timezone": "UTC-8"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-07T09:00:00Z",
+        "application_deadline": "2024-11-25T23:59:59Z",
+        "applications_count": 8
+    },
+    {
+        "id": "job_003",
+        "title": "Frontend Developer",
+        "company": "WebFlex",
+        "category": "Programming & Tech",
+        "sub_category": "Frontend Development",
+        "budget": 450,
+        "currency": "USD",
+        "description": "Looking for a frontend developer experienced in React and Tailwind CSS.",
+        "requirements": [
+            "2+ years of experience with JavaScript",
+            "Proficiency in React and Tailwind",
+            "Familiarity with REST APIs"
+        ],
+        "skills": [
+            "JavaScript",
+            "React",
+            "CSS",
+            "HTML",
+            "Tailwind CSS"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+1"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-06T10:00:00Z",
+        "application_deadline": "2024-12-05T23:59:59Z",
+        "applications_count": 5
+    },
+    {
+        "id": "job_004",
+        "title": "Backend Developer",
+        "company": "DataSolve",
+        "category": "Development",
+        "sub_category": "Backend Development",
+        "budget": 600,
+        "currency": "USD",
+        "description": "Hiring a backend developer to work on our RESTful API.",
+        "requirements": [
+            "Experience in Node.js and Express",
+            "Knowledge of MongoDB and Redis",
+            "Understanding of REST architecture"
+        ],
+        "skills": [
+            "Node.js",
+            "Express",
+            "MongoDB",
+            "Redis",
+            "API Development"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "hybrid",
+            "city": "London",
+            "country": "UK",
+            "timezone": "UTC+0"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-08T11:00:00Z",
+        "application_deadline": "2024-11-29T23:59:59Z",
+        "applications_count": 7
+    },
+    {
+        "id": "job_005",
+        "title": "Digital Marketing Specialist",
+        "company": "MarketMakers",
+        "category": "Digital Marketing",
+        "sub_category": "Social Media Marketing",
+        "budget": 300,
+        "currency": "USD",
+        "description": "Seeking a social media expert to handle our digital campaigns.",
+        "requirements": [
+            "3+ years in digital marketing",
+            "Proficiency in Facebook and Google Ads",
+            "Experience with analytics tools"
+        ],
+        "skills": [
+            "Social Media",
+            "Google Ads",
+            "Content Creation",
+            "SEO",
+            "Analytics"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-4"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-08T09:00:00Z",
+        "application_deadline": "2024-12-02T23:59:59Z",
+        "applications_count": 10
+    },
+    {
+        "id": "job_006",
+        "title": "Technical Writer",
+        "company": "DocuWorks",
+        "category": "Writing",
+        "sub_category": "Technical Writing",
+        "budget": 250,
+        "currency": "USD",
+        "description": "Looking for a technical writer for documentation and tutorials.",
+        "requirements": [
+            "2+ years of technical writing",
+            "Experience with API documentation",
+            "Excellent English skills"
+        ],
+        "skills": [
+            "Technical Writing",
+            "Documentation",
+            "APIs",
+            "English"
+        ],
+        "employment_type": "FREELANCE",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+3"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-10T08:00:00Z",
+        "application_deadline": "2024-12-01T23:59:59Z",
+        "applications_count": 6
+    },
+    {
+        "id": "job_007",
+        "title": "IT Consultant",
+        "company": "BizTech",
+        "category": "IT & Consultancy",
+        "sub_category": "IT Consulting",
+        "budget": 700,
+        "currency": "USD",
+        "description": "Seeking an IT consultant for system optimization.",
+        "requirements": [
+            "5+ years in IT consulting",
+            "Knowledge of cloud systems",
+            "Ability to work with clients"
+        ],
+        "skills": [
+            "IT Consulting",
+            "Cloud Systems",
+            "Networking",
+            "Client Management"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "hybrid",
+            "city": "Toronto",
+            "country": "Canada",
+            "timezone": "UTC-5"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-09T14:00:00Z",
+        "application_deadline": "2024-12-04T23:59:59Z",
+        "applications_count": 3
+    },
+    {
+        "id": "job_008",
+        "title": "Voiceover Artist",
+        "company": "MediaWave",
+        "category": "Music & Audio",
+        "sub_category": "Voiceover",
+        "budget": 150,
+        "currency": "USD",
+        "description": "Looking for a voiceover artist for a video project.",
+        "requirements": [
+            "Experience in voice acting",
+            "Clear, professional voice",
+            "Portfolio of work"
+        ],
+        "skills": [
+            "Voiceover",
+            "Acting",
+            "Audio Editing",
+            "Script Reading"
+        ],
+        "employment_type": "FREELANCE",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+0"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-06T16:00:00Z",
+        "application_deadline": "2024-11-20T23:59:59Z",
+        "applications_count": 9
+    },
+    {
+        "id": "job_009",
+        "title": "3D Animator",
+        "company": "PixelCraft",
+        "category": "Video & Animation",
+        "sub_category": "3D Animation",
+        "budget": 800,
+        "currency": "USD",
+        "description": "Need a skilled 3D animator for our upcoming gaming project.",
+        "requirements": [
+            "4+ years in 3D animation",
+            "Experience in Blender or Maya",
+            "Portfolio required"
+        ],
+        "skills": [
+            "3D Animation",
+            "Blender",
+            "Maya",
+            "Character Rigging",
+            "Game Design"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+2"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-07T13:00:00Z",
+        "application_deadline": "2024-11-28T23:59:59Z",
+        "applications_count": 4
+    },
+    {
+        "id": "job_010",
+        "title": "SEO Specialist",
+        "company": "RankWise",
+        "category": "Digital Marketing",
+        "sub_category": "SEO",
+        "budget": 350,
+        "currency": "USD",
+        "description": "Looking for an SEO specialist to improve website ranking.",
+        "requirements": [
+            "2+ years of SEO experience",
+            "Proficiency in Google Analytics",
+            "Understanding of SEO tools"
+        ],
+        "skills": [
+            "SEO",
+            "Google Analytics",
+            "Keyword Research",
+            "Link Building"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-7"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-08T09:30:00Z",
+        "application_deadline": "2024-11-25T23:59:59Z",
+        "applications_count": 13
+    },
+    {
+        "id": "job_011",
+        "title": "Content Writer",
+        "company": "WriteHub",
+        "category": "Writing",
+        "sub_category": "Content Writing",
+        "budget": 200,
+        "currency": "USD",
+        "description": "Need a content writer to create blog posts and articles on tech topics.",
+        "requirements": [
+            "Excellent grammar and writing skills",
+            "Experience in tech writing",
+            "Ability to meet tight deadlines"
+        ],
+        "skills": [
+            "Content Writing",
+            "SEO",
+            "Blogging",
+            "Research"
+        ],
+        "employment_type": "FREELANCE",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+0"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-08T10:30:00Z",
+        "application_deadline": "2024-11-25T23:59:59Z",
+        "applications_count": 15
+    },
+    {
+        "id": "job_012",
+        "title": "Sales Consultant",
+        "company": "SalesDrive",
+        "category": "Business",
+        "sub_category": "Sales Consulting",
+        "budget": 500,
+        "currency": "USD",
+        "description": "Seeking a sales consultant to help drive B2B sales.",
+        "requirements": [
+            "Proven experience in B2B sales",
+            "Ability to work with clients effectively",
+            "Strong communication skills"
+        ],
+        "skills": [
+            "Sales Consulting",
+            "Client Management",
+            "B2B Sales",
+            "Negotiation"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "hybrid",
+            "city": "New York",
+            "country": "USA",
+            "timezone": "UTC-5"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-09T11:00:00Z",
+        "application_deadline": "2024-11-30T23:59:59Z",
+        "applications_count": 6
+    },
+    {
+        "id": "job_013",
+        "title": "Video Editor",
+        "company": "VideoPlus",
+        "category": "Video & Animation",
+        "sub_category": "Video Editing",
+        "budget": 300,
+        "currency": "USD",
+        "description": "Hiring a video editor for YouTube content creation.",
+        "requirements": [
+            "2+ years of experience in video editing",
+            "Proficiency in Adobe Premiere Pro or Final Cut",
+            "Creative storytelling skills"
+        ],
+        "skills": [
+            "Video Editing",
+            "Adobe Premiere",
+            "Final Cut",
+            "Storyboarding"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-6"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-10T12:00:00Z",
+        "application_deadline": "2024-11-27T23:59:59Z",
+        "applications_count": 14
+    },
+    {
+        "id": "job_014",
+        "title": "Machine Learning Engineer",
+        "company": "AI Solutions",
+        "category": "Programming & Tech",
+        "sub_category": "Machine Learning",
+        "budget": 1000,
+        "currency": "USD",
+        "description": "Seeking a machine learning engineer for model development and deployment.",
+        "requirements": [
+            "3+ years in machine learning",
+            "Experience with Python, TensorFlow, and PyTorch",
+            "Strong knowledge of data processing"
+        ],
+        "skills": [
+            "Machine Learning",
+            "Python",
+            "TensorFlow",
+            "PyTorch",
+            "Data Analysis"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "hybrid",
+            "city": "Berlin",
+            "country": "Germany",
+            "timezone": "UTC+1"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-07T13:00:00Z",
+        "application_deadline": "2024-12-01T23:59:59Z",
+        "applications_count": 5
+    },
+    {
+        "id": "job_015",
+        "title": "Data Analyst",
+        "company": "InsightsPro",
+        "category": "Data",
+        "sub_category": "Data Analysis",
+        "budget": 600,
+        "currency": "USD",
+        "description": "Hiring a data analyst for data visualization and reporting.",
+        "requirements": [
+            "Proficient in SQL and Excel",
+            "Experience with data visualization tools",
+            "Strong analytical skills"
+        ],
+        "skills": [
+            "Data Analysis",
+            "SQL",
+            "Excel",
+            "Power BI",
+            "Tableau"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+3"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-08T14:00:00Z",
+        "application_deadline": "2024-11-28T23:59:59Z",
+        "applications_count": 8
+    },
+    {
+        "id": "job_016",
+        "title": "Full-Stack Developer",
+        "company": "WebForge",
+        "category": "Programming & Tech",
+        "sub_category": "Full-Stack Development",
+        "budget": 900,
+        "currency": "USD",
+        "description": "Looking for a full-stack developer with MERN experience.",
+        "requirements": [
+            "Experience with MongoDB, Express, React, and Node.js",
+            "3+ years in full-stack development",
+            "Familiarity with REST and GraphQL APIs"
+        ],
+        "skills": [
+            "MERN Stack",
+            "JavaScript",
+            "API Integration",
+            "GraphQL"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+0"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-09T15:00:00Z",
+        "application_deadline": "2024-12-10T23:59:59Z",
+        "applications_count": 9
+    },
+    {
+        "id": "job_017",
+        "title": "Project Manager",
+        "company": "TaskForce",
+        "category": "Business",
+        "sub_category": "Project Management",
+        "budget": 700,
+        "currency": "USD",
+        "description": "Looking for an experienced project manager to lead a development team.",
+        "requirements": [
+            "5+ years in project management",
+            "PMP certification preferred",
+            "Experience with agile methodologies"
+        ],
+        "skills": [
+            "Project Management",
+            "Agile",
+            "Scrum",
+            "Communication",
+            "Team Leadership"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "hybrid",
+            "city": "Sydney",
+            "country": "Australia",
+            "timezone": "UTC+10"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-06T09:00:00Z",
+        "application_deadline": "2024-11-29T23:59:59Z",
+        "applications_count": 7
+    },
+    {
+        "id": "job_018",
+        "title": "Brand Strategist",
+        "company": "BrandSync",
+        "category": "Business",
+        "sub_category": "Brand Strategy",
+        "budget": 450,
+        "currency": "USD",
+        "description": "Seeking a brand strategist to refine brand identity and positioning.",
+        "requirements": [
+            "3+ years in brand strategy",
+            "Experience with market research",
+            "Strong communication skills"
+        ],
+        "skills": [
+            "Brand Strategy",
+            "Market Research",
+            "Marketing",
+            "Positioning"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-5"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-08T12:00:00Z",
+        "application_deadline": "2024-11-22T23:59:59Z",
+        "applications_count": 6
+    },
+    {
+        "id": "job_019",
+        "title": "Financial Analyst",
+        "company": "FinanceHub",
+        "category": "Finance",
+        "sub_category": "Financial Analysis",
+        "budget": 600,
+        "currency": "USD",
+        "description": "Hiring a financial analyst to assist with budgeting and forecasting.",
+        "requirements": [
+            "2+ years in financial analysis",
+            "Proficiency in financial modeling",
+            "Experience with Excel and accounting software"
+        ],
+        "skills": [
+            "Financial Analysis",
+            "Budgeting",
+            "Forecasting",
+            "Excel",
+            "Accounting"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "hybrid",
+            "city": "Toronto",
+            "country": "Canada",
+            "timezone": "UTC-5"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-07T13:00:00Z",
+        "application_deadline": "2024-11-30T23:59:59Z",
+        "applications_count": 12
+    },
+    {
+        "id": "job_020",
+        "title": "Mobile App Developer",
+        "company": "Appify",
+        "category": "Programming & Tech",
+        "sub_category": "Mobile App Development",
+        "budget": 750,
+        "currency": "USD",
+        "description": "Seeking a mobile app developer with experience in Flutter.",
+        "requirements": [
+            "2+ years in mobile app development",
+            "Experience with Flutter and Dart",
+            "Strong understanding of mobile UX/UI"
+        ],
+        "skills": [
+            "Mobile App Development",
+            "Flutter",
+            "Dart",
+            "UX/UI Design"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-3"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-09T14:00:00Z",
+        "application_deadline": "2024-12-05T23:59:59Z",
+        "applications_count": 10
+    },
+    {
+        "id": "job_021",
+        "title": "Digital Marketing Specialist",
+        "company": "MarketGenius",
+        "category": "Marketing",
+        "sub_category": "Digital Marketing",
+        "budget": 500,
+        "currency": "USD",
+        "description": "Hiring a digital marketing specialist to boost online presence and engagement.",
+        "requirements": [
+            "2+ years in digital marketing",
+            "Experience with Google Ads and SEO",
+            "Strong analytical and communication skills"
+        ],
+        "skills": [
+            "Digital Marketing",
+            "Google Ads",
+            "SEO",
+            "Content Marketing"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+0"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-09T10:00:00Z",
+        "application_deadline": "2024-11-26T23:59:59Z",
+        "applications_count": 15
+    },
+    {
+        "id": "job_022",
+        "title": "Graphic Designer",
+        "company": "DesignIt",
+        "category": "Design",
+        "sub_category": "Graphic Design",
+        "budget": 300,
+        "currency": "USD",
+        "description": "Looking for a creative graphic designer for logo and branding projects.",
+        "requirements": [
+            "Proficiency in Adobe Creative Suite",
+            "Portfolio of past design projects",
+            "Strong eye for aesthetics"
+        ],
+        "skills": [
+            "Graphic Design",
+            "Adobe Photoshop",
+            "Adobe Illustrator",
+            "Branding"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+5"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-10T15:30:00Z",
+        "application_deadline": "2024-11-28T23:59:59Z",
+        "applications_count": 8
+    },
+    {
+        "id": "job_023",
+        "title": "Social Media Manager",
+        "company": "SocialConnect",
+        "category": "Marketing",
+        "sub_category": "Social Media Marketing",
+        "budget": 350,
+        "currency": "USD",
+        "description": "Seeking a social media manager to enhance brand presence across platforms.",
+        "requirements": [
+            "Experience managing social media accounts",
+            "Proficient in content creation and analytics",
+            "Familiarity with scheduling tools like Hootsuite"
+        ],
+        "skills": [
+            "Social Media Management",
+            "Content Creation",
+            "Hootsuite",
+            "Analytics"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-4"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-11T11:00:00Z",
+        "application_deadline": "2024-11-30T23:59:59Z",
+        "applications_count": 18
+    },
+    {
+        "id": "job_024",
+        "title": "iOS Developer",
+        "company": "AppMakers",
+        "category": "Programming & Tech",
+        "sub_category": "iOS Development",
+        "budget": 950,
+        "currency": "USD",
+        "description": "Looking for an iOS developer with Swift expertise to build mobile applications.",
+        "requirements": [
+            "Experience with Swift and iOS SDK",
+            "Strong knowledge of mobile app architecture",
+            "Ability to work independently"
+        ],
+        "skills": [
+            "iOS Development",
+            "Swift",
+            "Xcode",
+            "Mobile Architecture"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+1"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-12T09:30:00Z",
+        "application_deadline": "2024-12-05T23:59:59Z",
+        "applications_count": 7
+    },
+    {
+        "id": "job_025",
+        "title": "Customer Support Representative",
+        "company": "HelpDeskPro",
+        "category": "Customer Service",
+        "sub_category": "Customer Support",
+        "budget": 400,
+        "currency": "USD",
+        "description": "Need a customer support representative to handle live chat and email inquiries.",
+        "requirements": [
+            "Excellent communication skills",
+            "Experience with customer support software",
+            "Ability to resolve issues efficiently"
+        ],
+        "skills": [
+            "Customer Support",
+            "Communication",
+            "Problem Solving",
+            "CRM"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+3"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-13T14:00:00Z",
+        "application_deadline": "2024-11-29T23:59:59Z",
+        "applications_count": 25
+    },
+    {
+        "id": "job_026",
+        "title": "SEO Specialist",
+        "company": "RankUp",
+        "category": "Marketing",
+        "sub_category": "SEO",
+        "budget": 550,
+        "currency": "USD",
+        "description": "Looking for an SEO specialist to improve website rankings and organic traffic.",
+        "requirements": [
+            "3+ years in SEO",
+            "Knowledge of keyword research tools",
+            "Experience with on-page and off-page SEO"
+        ],
+        "skills": [
+            "SEO",
+            "Keyword Research",
+            "On-Page SEO",
+            "Link Building"
+        ],
+        "employment_type": "CONTRACT",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+8"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-14T10:00:00Z",
+        "application_deadline": "2024-11-30T23:59:59Z",
+        "applications_count": 12
+    },
+    {
+        "id": "job_027",
+        "title": "UX Designer",
+        "company": "UserFlow",
+        "category": "Design",
+        "sub_category": "UX Design",
+        "budget": 700,
+        "currency": "USD",
+        "description": "Seeking a UX designer to optimize user flows and improve interface usability.",
+        "requirements": [
+            "Experience with wireframing and prototyping tools",
+            "Strong understanding of user-centered design principles",
+            "Portfolio of UX design projects"
+        ],
+        "skills": [
+            "UX Design",
+            "Wireframing",
+            "Prototyping",
+            "User Research"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "hybrid",
+            "city": "San Francisco",
+            "country": "USA",
+            "timezone": "UTC-8"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-15T12:30:00Z",
+        "application_deadline": "2024-12-05T23:59:59Z",
+        "applications_count": 5
+    },
+    {
+        "id": "job_028",
+        "title": "Backend Developer",
+        "company": "TechNest",
+        "category": "Programming & Tech",
+        "sub_category": "Backend Development",
+        "budget": 800,
+        "currency": "USD",
+        "description": "Looking for a backend developer with Node.js and Express experience.",
+        "requirements": [
+            "Proficiency in Node.js and Express",
+            "Familiarity with RESTful APIs",
+            "Experience with database management"
+        ],
+        "skills": [
+            "Node.js",
+            "Express",
+            "Database Management",
+            "API Development"
+        ],
+        "employment_type": "FULL_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC+2"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-16T11:00:00Z",
+        "application_deadline": "2024-12-08T23:59:59Z",
+        "applications_count": 10
+    },
+    {
+        "id": "job_029",
+        "title": "Business Analyst",
+        "company": "BizInsights",
+        "category": "Business",
+        "sub_category": "Business Analysis",
+        "budget": 650,
+        "currency": "USD",
+        "description": "Seeking a business analyst to drive process improvements and strategic planning.",
+        "requirements": [
+            "Experience with business analysis",
+            "Proficiency in data analysis and reporting",
+            "Strong critical thinking skills"
+        ],
+        "skills": [
+            "Business Analysis",
+            "Data Analysis",
+            "Process Improvement",
+            "Strategic Planning"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-6"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-17T14:00:00Z",
+        "application_deadline": "2024-12-10T23:59:59Z",
+        "applications_count": 7
+    },
+    {
+        "id": "job_030",
+        "title": "Email Marketing Specialist",
+        "company": "EmailEngage",
+        "category": "Marketing",
+        "sub_category": "Email Marketing",
+        "budget": 300,
+        "currency": "USD",
+        "description": "Hiring an email marketing specialist to design and implement email campaigns.",
+        "requirements": [
+            "Experience with email marketing platforms",
+            "Knowledge of email analytics",
+            "Strong copywriting skills"
+        ],
+        "skills": [
+            "Email Marketing",
+            "Campaign Management",
+            "Copywriting",
+            "Analytics"
+        ],
+        "employment_type": "PART_TIME",
+        "location": {
+            "type": "remote",
+            "timezone": "UTC-3"
+        },
+        "status": "OPEN",
+        "posted_date": "2024-11-18T09:00:00Z",
+        "application_deadline": "2024-12-01T23:59:59Z",
+        "applications_count": 9
+    }
+]

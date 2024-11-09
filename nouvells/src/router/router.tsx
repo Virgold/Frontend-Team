@@ -24,9 +24,9 @@ const router = createBrowserRouter([
                 // element: <About />,
             },
             {
-                path: 'services',
+                path: 'jobs',
                 element: <ServicesPage />,
-                errorElement: "<div className='bg-red-400'>error</div>"
+                // errorElement: "<div className='bg-red-400'>error</div>"
             },
             {
                 path: "dashboard",

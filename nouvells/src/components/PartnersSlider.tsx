@@ -13,6 +13,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 
+const PARTNERS = [
+    { src: ApplePay, alt: 'Apple Pay' },
+    { src: Payoneer, alt: 'Payoneer' },
+    { src: Amazon, alt: 'Amazon' },
+    { src: GooglePay, alt: 'Google Pay' },
+    { src: Visa, alt: 'Visa' },
+    { src: Stripe, alt: 'Stripe' },
+    { src: Mastercard, alt: 'Mastercard' }
+]
+
 const PartnersSlider = () => {
     return (
         <Swiper
@@ -39,27 +49,11 @@ const PartnersSlider = () => {
             }}
             modules={[Pagination, Autoplay]}
         >
-            <SwiperSlide className="partners-slider__slide swiper-no-margin-left">
-                <img src={ApplePay} alt="Apple Pay" />
-            </SwiperSlide>
-            <SwiperSlide className="partners-slider__slide">
-                <img src={Payoneer} alt="Payoneer" />
-            </SwiperSlide>
-            <SwiperSlide className="partners-slider__slide">
-                <img src={Amazon} alt="Amazon" />
-            </SwiperSlide>
-            <SwiperSlide className="partners-slider__slide">
-                <img src={GooglePay} alt="Google Pay" />
-            </SwiperSlide>
-            <SwiperSlide className="partners-slider__slide">
-                <img src={Visa} alt="Visa" />
-            </SwiperSlide>
-            <SwiperSlide className="partners-slider__slide swiper-no-margin-righ">
-                <img src={Stripe} alt="Stripe" />
-            </SwiperSlide>
-            <SwiperSlide className="partners-slider__slide">
-                <img src={Mastercard} alt="Mastercard" />
-            </SwiperSlide>
+            {PARTNERS.map((partner, index) => (
+                <SwiperSlide key={index}>
+                    <img src={partner.src} alt={partner.alt} />
+                </SwiperSlide>
+            ))}
         </Swiper>
     );
 };
