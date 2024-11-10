@@ -66,11 +66,11 @@ const Footer = () => {
 
 
                 <li>
-                  <a className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center" href="https://facebook.com"><FaInstagram size={20} /></a>
+                  <a className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center" href="https://www.instagram.com/ccnouvells/profilecard/"><FaInstagram size={20} /></a>
                 </li>
 
                 <li>
-                  <a className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center" href="https://facebook.com"> <FaLinkedinIn size={20} /></a>
+                  <a className="bg-[#2D5489] text-white rounded-full p-2 w-10 h-10 flex items-center justify-center" href="https://www.linkedin.com/company/nouvells/"> <FaLinkedinIn size={20} /></a>
                 </li>
               </ul>
             </div>
