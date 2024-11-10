@@ -3,6 +3,10 @@ import { Menu } from 'lucide-react';
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { NAVLINKS } from "@/constants";
+import SearchDialog from "@/components/SearchDialog";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/theme/mode-toggle";
+import Logo from "@/assets/logo";
 
 
 const NavigationLinks = ({ className = '', toggleMenu }: { className?: string; toggleMenu?: () => void }) => {
@@ -57,7 +61,6 @@ const NavigationLinks = ({ className = '', toggleMenu }: { className?: string; t
             </NavLink>
           </li>
         ))}
-
       </ul>
     </div>
   );
@@ -71,20 +74,21 @@ const Navbar = () => {
   return (
     <header className=" w-full max-w-full">
       <div className="container">
-        <div className="sub-container flex justify-between py-3 lg:py-6">
+        <div className="sub-container flex items-center justify-between">
           <NavLink to={'/'}>
-            <h2>Nouvels</h2>
-            <p>Let every project thrive</p>
+            <Logo className='h-12 2xl:h-24 w-auto' />
           </NavLink>
-
-          <div className="absolute top-4 right-6 md:hidden">
-            <Menu onClick={toggleMenu} />
-          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:block p-4">
             <NavigationLinks />
           </nav>
+
+          <div className="flex flex-aut lg:flex-grow-0 gap-3 navgroup">
+            <SearchDialog />
+            <ModeToggle />
+            <Button className="md:hidden" variant="outline" onClick={toggleMenu}><Menu /></Button>
+          </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
