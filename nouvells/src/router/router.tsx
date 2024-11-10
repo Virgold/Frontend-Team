@@ -4,6 +4,8 @@ import Homepage from "@/pages/Homepage";
 import NotFound from "@/pages/NotFound";
 import JobsPage from "@/pages/JobsPage";
 import ServicesPage from "@/pages/ServicesPage";
+import UnderConstruction from "@/pages/UnderConstruction";
+import ComingSoon from "@/pages/ComingSoon";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
 // import Dashboard from "./pages/Dashboard";
@@ -21,31 +23,24 @@ const router = createBrowserRouter([
                 element: <Homepage />,
             },
             {
-                path: "about",
-                // element: <About />,
-            },
-            {
                 path: 'jobs',
                 element: <JobsPage />,
-                // errorElement: "<div className='bg-red-400'>error</div>"
             },
             {
                 path: 'services',
                 element: <ServicesPage />
             },
             {
-                path: "dashboard",
-                // element: <Dashboard />,
-                children: [
-                    {
-                        path: "profile",
-                        // element: <Profile />,
-                    },
-                    {
-                        path: "settings",
-                        // element: <Settings />,
-                    },
-                ],
+                path: 'coming-soon',
+                element: <ComingSoon />
+            },
+            {
+                path: 'contact',
+                element: <UnderConstruction />
+            },
+            {
+                path: 'under-construction',
+                element: <UnderConstruction />
             },
             {
                 path: "*", // Catch-all route
