@@ -22,10 +22,11 @@ const searchList = [
     { href: '/jobs/seo-specialist', label: 'SEO Specialist' },
 ];
 
-const Hero = ({ page = 'home' }: { page?: 'home' | 'services' }) => {
+const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
     const messages = {
         home: 'Discover Your Perfect Job Match and Connect with Top Employers Today!',
-        services: 'Browse Available Job Category...',
+        jobs: 'Browse Available Job Category...',
+        services: 'Scroll through our available services'
     };
 
     return (

@@ -16,8 +16,8 @@ const CategoriesSwiper = ({ activeCategory, setActiveCategory }: { activeCategor
 
     useEffect(() => {
         if (typeof activeCategory === 'number') {
-            searchParams.set('category', CATEGORIES[activeCategory]);
-            setSearchParams(searchParams);
+            // searchParams.set('query', CATEGORIES[activeCategory]);
+            // setSearchParams(searchParams);
         }
     }, [activeCategory, searchParams, setSearchParams]);
 
