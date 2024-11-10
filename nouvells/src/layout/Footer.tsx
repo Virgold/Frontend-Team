@@ -31,7 +31,7 @@ const Footer = () => {
             {/* Logo */}
             <Link to={'/'} className="hidden lg:block text-center md:text-left">
               {/* <Logo className="h-6 md:h-8 lg:h-10 xl:h-14 2xl:h-24 w-auto" /> */}
-              <Logo className="w-32 lg:w-52 h-auto"/>
+              <Logo className="w-24 lg:w-40 h-auto"/>
             </Link>
 
             {/* Navigation Links */}

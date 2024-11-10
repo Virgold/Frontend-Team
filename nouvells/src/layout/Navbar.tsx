@@ -76,7 +76,7 @@ const Navbar = () => {
       <div className="container">
         <div className="sub-container flex items-center justify-between">
           <NavLink to={'/'}>
-            <Logo className="w-32 lg:w-56 h-auto"/>
+            <Logo className="w-32 lg:w-44 h-auto"/>
           </NavLink>
 
           {/* Desktop Navigation */}
