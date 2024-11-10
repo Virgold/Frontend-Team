@@ -6,14 +6,29 @@ const SearchBar = () => {
     const [value, setValue] = useState('');
     const navigate = useNavigate();
 
+    // const handleSearch = () => {
+    //     if (value.trim()) {
+    //         const searchParams = new URLSearchParams({
+    //             query: value,
+    //             // You can add additional params here if needed
+    //             // scope: 'all' // Optional: to indicate it's a global search
+    //         });
+    //         navigate(`/jobs?query=${encodeURIComponent(value)}`);
+    //     } else {
+    //         alert("Please enter a search term.");
+    //     }
+    // };
+
     const handleSearch = () => {
-        alert('hhh')
         if (value.trim()) {
-            navigate(`/jobs?query=${encodeURIComponent(value)}`);
-        } else {
-            alert("Please enter a search term.");
+            const searchParams = new URLSearchParams({
+                query: value.trim(),
+                scope: 'all'  // This indicates it's a global search
+            });
+            navigate(`/jobs/?${searchParams.toString()}`);
         }
     };
+
 
     return (
         <div className="w-full max-w-md md:max-w-3xl mx-auto mb-6 md:mb-8 px-4 md:px-0">

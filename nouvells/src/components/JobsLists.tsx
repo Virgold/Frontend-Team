@@ -10,8 +10,8 @@ import {
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
-import { JOB_CATEGORIES as CATEGORIES } from '@/constants';
 import useDisplayCount from '@/contexts/screenResize';
+import { capitalize } from '@/lib/utils';
 
 
 interface Location {
@@ -23,6 +23,7 @@ interface Job {
     id: string;
     title: string;
     company: string;
+    image: string;
     category: string;
     sub_category: string;
     budget: number;
@@ -38,14 +39,52 @@ interface Job {
     applications_count: number;
 }
 
+const generatePastelColor = () => {
+    const r = Math.floor(Math.random() * 128 + 127);
+    const g = Math.floor(Math.random() * 128 + 127);
+    const b = Math.floor(Math.random() * 128 + 127);
+    return `rgb(${r}, ${g}, ${b})`;
+};
+
+const JobPlaceholderImage = ({ company }: { company: string }) => (
+    <svg width="100%" viewBox="0 0 300 150" preserveAspectRatio="none" className="w-full">
+        <path
+            d="M 20 0
+               H 280
+               Q 300 0 300 20
+               V 150
+               H 0
+               V 20
+               Q 0 0 20 0
+               Z"
+            style={{ fill: generatePastelColor() }}
+        />
+        <text
+            x="50%"
+            y="50%"
+            fontSize="36"
+            fontWeight="bold"
+            fill="#333"
+            textAnchor="middle"
+            alignmentBaseline="middle"
+        >
+            {company.toUpperCase()}
+        </text>
+    </svg>
+);
+
+
 const JobCard = ({ job }: { job: Job }) => {
     return (
         <Card className="w-full max-w-sm flex-grow basis-[300px] outline-none border-none bg-secondary/100 rounded-3xl hover:shadow-lg transition-shadow">
-            <img
-                className="rounded-t-3xl w-full h-48 object-cover"
-                src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                alt={`${job.company} job posting`}
-            />
+            {job.image ? (
+                <img
+                    className="rounded-t-3xl w-full h-48 object-cover"
+                    src={job?.image}
+                    alt={`${job.company} job posting`}
+                />
+            ) : (<JobPlaceholderImage company={job.company} />)}
+
             <CardHeader>
                 <CardTitle className="text-xl line-clamp-2">
                     {job.title} at {job.company}
@@ -86,7 +125,7 @@ const JobCardSkeleton = () => {
 };
 
 
-const JobsList = ({ categoryIndex = 0 }: { categoryIndex?: number }) => {
+const JobsList = ({ searchQuery = 'all jobs' }: { searchQuery?: string }) => {
     const [jobs, setJobs] = useState<Job[] | null>([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);
@@ -99,7 +138,7 @@ const JobsList = ({ categoryIndex = 0 }: { categoryIndex?: number }) => {
             setLoading(true);
             setError(null);
             try {
-                const result = await getJobs(categoryIndex);
+                const result = await getJobs(searchQuery);
                 setJobs(result as Job[]);
             } catch (e) {
                 setError('Failed to fetch jobs. Please try again later.');
@@ -111,7 +150,7 @@ const JobsList = ({ categoryIndex = 0 }: { categoryIndex?: number }) => {
         };
 
         fetchJobs();
-    }, [categoryIndex]);
+    }, [searchQuery]);
 
     const handleLoadMore = () => {
         const increment = window.innerWidth >= 1024 ? 6 : 2;
@@ -120,9 +159,15 @@ const JobsList = ({ categoryIndex = 0 }: { categoryIndex?: number }) => {
 
     return (
         <section className="container">
-            <h1 className="sub-container font-medium text-pretty text-3xl mb-8">
-                {CATEGORIES[categoryIndex] || 'All Jobs'}
+            <h1 className="flex flex-col sm:flex-row items-start sm:items-center gap-2 text-pretty">
+                <span className="text-gray-600 font-normal text-xl">
+                    Showing results for:
+                </span>
+                <span className="text-3xl font-semibold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
+                    {capitalize(searchQuery) || 'All Jobs'}
+                </span>
             </h1>
+
             <div className="sub-container">
                 {error && (
                     <div className="text-red-500 text-center py-4 bg-red-50 rounded-lg">
@@ -141,7 +186,7 @@ const JobsList = ({ categoryIndex = 0 }: { categoryIndex?: number }) => {
                         ))
                     ) : (
                         <p className="text-center text-gray-500 py-8">
-                            No jobs found for this category.
+                            No jobs found for {searchQuery}.
                         </p>
                     )}
                 </div>

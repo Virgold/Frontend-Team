@@ -1,8 +1,11 @@
 import { Button } from "@/components/ui/button";
 import personImage from '@/assets/homepage/happyGirl.svg'
 import bgPattern from '@/assets/homepage/job-pattern-bg.svg'
+import { useNavigate } from "react-router-dom";
 
 const DreamJobBanner = () => {
+    const navigate = useNavigate();
+    
     return (
         <section className="relative overflow-hidden">
             <div className="container">
@@ -21,7 +24,9 @@ const DreamJobBanner = () => {
                             <p className="text-base md:text-lg md:w-2/3">
                                 Explore Opportunities, Build Connections, and Advance Your Career with Nouvelles. Sign up or Create an account now to get started.
                             </p>
-                            <Button className="mt-4 px-6 py-2 bg-transparent border border-white text-white rounded-3xl hover:bg-white hover:text-blue-500 transition-colors">Get Started
+                            <Button className="mt-4 px-6 py-2 bg-transparent border border-white text-white rounded-3xl hover:bg-white hover:text-blue-500 transition-colors"
+                            onClick={()=> navigate('/coming-soon')}
+                            >Get Started
                                 <svg
                                     className="ml-2 w-5 h-5"
                                     viewBox="0 0 20 20"

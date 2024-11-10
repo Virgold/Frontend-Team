@@ -2,6 +2,7 @@ import createAccountImage from '@/assets/homepage/job-card/card-1.png';
 import verifyAccountImage from '@/assets/homepage/job-card/card-2.svg';
 import applyJobImage from '@/assets/homepage/job-card/card-3.svg';
 import allJobsImage from '@/assets/homepage/job-card/card-4.svg';
+import { Link } from 'react-router-dom';
 
 const cardsDetails = [
     {
@@ -44,19 +45,21 @@ const JobSteps = () => {
 
 const JobStepCard = ({ imagePath, label, text, alt }: { imagePath: string, label: string, text: string, alt?: string }) => {
     return (
-        <div className="flex flex-col items-center bg-accent rounded-lg py-4 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-            <div className="mb-4 w-full flex items-center justify-center">
-                <img
-                    src={imagePath}
-                    alt={alt || 'Job steps guide card'}
-                    className="w-96 h-96 object-contain"
-                />
+        <Link to={'/under-construction'}>
+            <div className="flex flex-col items-center bg-accent rounded-lg py-4 shadow-lg transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+                <div className="mb-4 w-full flex items-center justify-center">
+                    <img
+                        src={imagePath}
+                        alt={alt || 'Job steps guide card'}
+                        className="w-96 h-96 object-contain"
+                    />
+                </div>
+                <div className='w-full text-left px-[5%]'>
+                    <h3 className="text-2xl lg:text-3xl font-semibold text-gray-800 mb-2">{label}</h3>
+                    <p className="text-[#5B5B5B]">{text}</p>
+                </div>
             </div>
-            <div className='w-full text-left px-[5%]'>
-                <h3 className="text-2xl lg:text-3xl font-semibold text-gray-800 mb-2">{label}</h3>
-                <p className="text-[#5B5B5B]">{text}</p>
-            </div>
-        </div>
+        </Link>
     );
 };
 

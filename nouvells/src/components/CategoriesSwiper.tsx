@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useEffect, useRef } from 'react';
+import { Dispatch, SetStateAction, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { cn } from '@/lib/utils';
@@ -10,19 +10,13 @@ import 'swiper/css/pagination';
 
 import { Button } from './ui/button';
 
-const CategoriesSwiper = ({ activeCategory, setActiveCategory }: { activeCategory: number; setActiveCategory: Dispatch<SetStateAction<number>> }) => {
+const CategoriesSwiper = ({ searchQuery }: { searchQuery?: string, setSearchQuery?: Dispatch<SetStateAction<string>> }) => {
     const swiperRef = useRef(null);
     const [searchParams, setSearchParams] = useSearchParams();
 
-    useEffect(() => {
-        if (typeof activeCategory === 'number') {
-            // searchParams.set('query', CATEGORIES[activeCategory]);
-            // setSearchParams(searchParams);
-        }
-    }, [activeCategory, searchParams, setSearchParams]);
-
-    const handleCategoryClick = (index: number) => {
-        setActiveCategory(index);
+    const handleCategoryClick = (categoryValue: string) => {
+        searchParams.set('query', categoryValue.toLowerCase());
+        setSearchParams(searchParams)
     };
 
     return (
@@ -62,19 +56,19 @@ const CategoriesSwiper = ({ activeCategory, setActiveCategory }: { activeCategor
                         },
                     }}
                 >
-                    {CATEGORIES.map((category, index) => (
+                    {CATEGORIES.map((category) => (
                         <SwiperSlide
                             key={category}
                             className="!w-auto"
                         >
                             <Button
                                 variant="ghost"
-                                onClick={() => handleCategoryClick(index)}
+                                onClick={() => handleCategoryClick(category)}
                                 className={cn(
                                     'rounded-full px-6 py-3 h-auto font-medium transition-all duration-200 whitespace-nowrap',
                                     {
-                                        'bg-primary text-white hover:bg-primary/90': index === activeCategory,
-                                        'bg-secondary text-gray-700 hover:bg-secondary/80 hover:text-primary': index !== activeCategory
+                                        'bg-primary text-white hover:bg-primary/90': category.toLowerCase() === searchQuery,
+                                        'bg-secondary text-gray-700 hover:bg-secondary/80 hover:text-primary': category.toLowerCase() !== searchQuery
                                     }
                                 )}
                             >
