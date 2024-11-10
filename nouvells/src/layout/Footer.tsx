@@ -30,7 +30,8 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center border-b-2 py-8 gap-8">
             {/* Logo */}
             <Link to={'/'} className="hidden lg:block text-center md:text-left">
-              <Logo className='h-12 2xl:h-24 w-auto' />
+              {/* <Logo className="h-6 md:h-8 lg:h-10 xl:h-14 2xl:h-24 w-auto" /> */}
+              <Logo className="w-32 lg:w-52 h-auto"/>
             </Link>
 
             {/* Navigation Links */}
