@@ -1,7 +1,9 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaInstagram } from "react-icons/fa6";
 import { NAVLINKS } from "@/constants";
+
+import logo from '@/assets/logo.svg';
 
 const Footer = () => {
   return (
@@ -10,19 +12,21 @@ const Footer = () => {
         <div className="sub-container">
           <div className="flex flex-col md:flex-row justify-between items-center border-b-2 py-8 gap-8">
             {/* Logo */}
-            <div className="hidden lg:block text-center md:text-left">logo</div>
+            <div className="hidden lg:block text-center md:text-left">
+              {/* <img className=" w-12 h-12" src={logo} alt="" /> */}
+            </div>
 
             {/* Navigation Links */}
             <div className="self-start lg:self-auto" >
               <ul className="flex flex-col md:flex-row text-center md:text-right gap-4 md:gap-8">
-                {NAVLINKS.map(({ href, label }) => (
-                  <li key={href}>
-                    <NavLink
+                {NAVLINKS.map(({ href, label }, index) => (
+                  <li key={index}>
+                    <Link
                       to={href}
                       className="block md:inline p-4 hover:text-blue-600 transition-colors"
                     >
                       {label}
-                    </NavLink>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -61,7 +65,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </footer >
   );
 }
 
