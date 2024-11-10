@@ -7,12 +7,13 @@ export const initialState: ThemeProviderState = {
 
 export const NAVLINKS = [
     { href: '/jobs', label: 'Jobs' },
-    { href: '/company', label: 'Company' },
+    { href: '/#coming-soon', label: 'Company' },
     { href: '/services', label: 'Services' },
-    { href: '/pricing', label: 'Pricing' }
+    { href: '/#coming-soon', label: 'Pricing' }
 ];
 
 export const JOB_CATEGORIES = [
+    'All Jobs',
     'Graphics & Design',
     'Programming & Tech',
     'Development',
@@ -23,7 +24,6 @@ export const JOB_CATEGORIES = [
     'Writing',
     'Music & Audio',
     'Video & Animation',
-    'More Services'
 ];
 
 export enum JOB_DISPLAY_COUNT {

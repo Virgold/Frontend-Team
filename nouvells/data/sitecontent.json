@@ -1,0 +1,92 @@
+{
+    "/": {
+        "title": "Home",
+        "content": "Welcome to Nouvells, where we empower every project to thrive. Explore job opportunities, professional services, and resources crafted to elevate your goals.",
+        "keywords": [
+            "home",
+            "Nouvels",
+            "project resources",
+            "jobs",
+            "services",
+            "welcome"
+        ],
+        "description": "Nouvels homepage - discover resources and services that drive project success.",
+        "headings": [
+            "Welcome",
+            "Explore Jobs",
+            "Our Services",
+            "Customer Success Stories",
+            "News & Updates"
+        ]
+    },
+    "/jobs": {
+        "title": "Job Opportunities",
+        "content": "Browse open positions across various industries. Whether you're looking for freelance, full-time, or part-time roles, find a job that fits your skills and ambitions.",
+        "keywords": [
+            "jobs",
+            "careers",
+            "job listings",
+            "employment",
+            "career opportunities"
+        ],
+        "description": "Explore job listings tailored to diverse skills and industries on Nouvels.",
+        "headings": [
+            "Job Openings",
+            "Top Industries",
+            "Popular Roles",
+            "Why Choose Us",
+            "Career Advice"
+        ]
+    },
+    "/services": {
+        "title": "Our Services",
+        "content": "Nouvels offers an array of services designed to support projects at all stages. From consulting to development, we help bring ideas to life with precision and expertise.",
+        "keywords": [
+            "services",
+            "consulting",
+            "development",
+            "project support",
+            "business growth"
+        ],
+        "description": "Explore our professional services that cater to diverse project needs, including consulting and development.",
+        "headings": [
+            "Consulting Services",
+            "Project Development",
+            "Business Growth Support",
+            "Client Success Stories"
+        ]
+    },
+    "/blog": {
+        "title": "Blog",
+        "content": "Discover industry insights, career advice, and the latest updates from Nouvels. Our blog is a resource for everyone looking to thrive in the professional world.",
+        "keywords": [
+            "blog",
+            "news",
+            "industry insights",
+            "career advice",
+            "updates"
+        ],
+        "description": "Stay updated with the latest industry insights, news, and career advice on the Nouvels blog.",
+        "headings": [
+            "Latest Posts",
+            "Career Tips",
+            "Industry Insights",
+            "Project Success Stories"
+        ]
+    },
+    "/#coming-soon": {
+        "title": "Company - Coming Soon",
+        "content": "Our company details and vision are coming soon! Stay tuned to learn more about Nouvels.",
+        "keywords": [
+            "coming soon",
+            "company info",
+            "about Nouvels"
+        ],
+        "description": "Learn more about Nouvels' mission, vision, and values - coming soon!",
+        "headings": [
+            "About Us",
+            "Our Mission",
+            "Vision Statement"
+        ]
+    }
+}

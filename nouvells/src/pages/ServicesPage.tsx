@@ -4,7 +4,7 @@ import ServicesList from "@/components/ServicesList"
 const ServicesPage = () => {
     return (
         <>
-            {/* <Hero /> */}
+            <Hero page="services" />
             <ServicesList />
         </>
     )

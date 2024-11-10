@@ -8,25 +8,28 @@ import HiringManager from "@/assets/hiringManager";
 import bolt from '@/assets/homepage/bolt.svg';
 
 const searchList = [
-    { href: '/jobs/uiux', label: 'UI/UX Design', active: 'true' },
-    { href: '/jobs/content-writers', label: 'Content Writer' },
-    { href: '/jobs/web-development', label: 'Web Development' },
-    { href: '/jobs/mobile-development', label: 'Mobile Development' },
-    { href: '/jobs/data-science', label: 'Data Science' },
-    { href: '/jobs/digital-marketing', label: 'Digital Marketing' },
-    { href: '/jobs/software-engineering', label: 'Software Engineering' },
-    { href: '/jobs/project-management', label: 'Project Management' },
-    { href: '/jobs/graphic-design', label: 'Graphic Design' },
-    { href: '/jobs/video-editing', label: 'Video Editing' },
-    { href: '/jobs/photography', label: 'Photography' },
-    { href: '/jobs/seo-specialist', label: 'SEO Specialist' },
+    { href: '/jobs?query=ui-ux', label: 'UI/UX Design' },
+    { href: '/jobs?query=content-writer', label: 'Content Writer' },
+    { href: '/jobs?query=web-development', label: 'Web Development' },
+    { href: '/jobs?query=mobile-development', label: 'Mobile Development' },
+    { href: '/jobs?query=data-science', label: 'Data Science' },
+    { href: '/jobs?query=digital-marketing', label: 'Digital Marketing' },
+    { href: '/jobs?query=software-engineering', label: 'Software Engineering' },
+    { href: '/jobs?query=project-management', label: 'Project Management' },
+    { href: '/jobs?query=graphic-design', label: 'Graphic Design' },
+    { href: '/jobs?query=video-editing', label: 'Video Editing' },
+    { href: '/jobs?query=photography', label: 'Photography' },
+    { href: '/jobs?query=seo-specialist', label: 'SEO Specialist' },
 ];
 
-const Hero = ({ page = 'home' }: { page?: 'home' | 'services' }) => {
+const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
+
     const messages = {
         home: 'Discover Your Perfect Job Match and Connect with Top Employers Today!',
-        services: 'Browse Available Job Category...',
+        jobs: 'Explore Diverse Job Opportunities and Find the Role That Suits You Best...',
+        services: 'Browse Our Specialized Services Designed to Enhance Your Career Path'
     };
+
 
     return (
         <div className="overflow-hidden -top-4 relative">
@@ -64,16 +67,10 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' }) => {
                         {page === 'home' && (
                             <div className="flex-grow">
                                 <ul className="w-full flex flex-wrap gap-2 md:gap-4 lg:gap-7 items-center justify-center py-4">
-                                    {searchList.map(({ href, label, active = false }) => (
+                                    {searchList.map(({ href, label }) => (
                                         <li key={href} className="flex justify-center">
                                             <Link
-                                                className={cn(
-                                                    'text-xs sm:text-sm md:text-base lg:text-sm rounded-full px-3 py-1 md:px-4 md:py-2 transition-colors duration-300',
-                                                    {
-                                                        'bg-green-400': active,
-                                                        'bg-gray-200 hover:bg-gray-300': !active,
-                                                    }
-                                                )}
+                                                className='text-xs sm:text-sm md:text-base lg:text-sm rounded-full px-3 py-1 md:px-4 md:py-2 transition-colors duration-300 bg-slate-200 hover:bg-green-400'
                                                 to={href}
                                             >
                                                 {label}
@@ -89,7 +86,7 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' }) => {
                     <HiringManager className="hidden lg:block w-28 lg:w-40 absolute top-[15%] right-0" />
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

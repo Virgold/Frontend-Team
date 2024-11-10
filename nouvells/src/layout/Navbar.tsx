@@ -1,44 +1,67 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import { Menu } from 'lucide-react';
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import { NAVLINKS } from "@/constants";
+import SearchDialog from "@/components/SearchDialog";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "@/components/theme/mode-toggle";
+import Logo from "@/assets/logo";
 
-
-const authButtons = [
-  { href: '/login', label: 'Login', className: 'bg-secondary' },
-  { href: '/signup', label: 'Sign up', className: 'text-secondary' }
-];
 
 const NavigationLinks = ({ className = '', toggleMenu }: { className?: string; toggleMenu?: () => void }) => {
-  const navigation = useNavigate();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [activeLabel, setActiveLabel] = useState("");
+
+  const handleLinkClick = (href: string, label: string) => {
+
+    if (href.startsWith('/#')) {
+      const sectionId = href.replace('/#', '');
+      setActiveLabel(label);
+      navigate('/');
+
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+        toggleMenu?.();
+      }, 0);
+    } else {
+      setActiveLabel('');
+      navigate(href);
+      toggleMenu?.();
+    }
+  };
+
+  const isActive = (href: string, label: string) => {
+    if (href.startsWith('/#')) {
+      return activeLabel === label;
+    }
+    return location.pathname === href;
+  };
+
 
   return (
     <div className="w-full flex items-center flex-col md:flex-row justify-between gap-4">
-      <ul className={`container w-full flex flex-col md:w-auto md:flex-row text-right gap-4 md:gap-8 navgroup ${className}`}>
-        {NAVLINKS.map(({ href, label }) => (
-          <li key={href}>
-            <NavLink onClick={toggleMenu} to={href} className="block md:inline p-4 hover:text-blue-600 transition-colors">
+      <ul className={`w-full flex flex-col md:flex-row text-right gap-4 lg:gap-8 navgroup ${className}`}>
+
+        {NAVLINKS.map(({ href, label }, index) => (
+          <li key={index}>
+            <NavLink
+              to={href}
+              onClick={() => handleLinkClick(href, label)}
+              className={cn(
+                "block md:inline p-4 hover:text-blue-600 transition-colors",
+                isActive(href, label) ? "text-blue-600 font-semibold" : ""
+              )}
+            >
               {label}
             </NavLink>
           </li>
         ))}
       </ul>
-      <div className="flex gap-3 navgroup">
-        {authButtons.map(({ href, label, className }) => (
-          <Button
-            key={href}
-            className={cn(`text-sm lg:text-lg font-medium px-8 py-4 rounded-full`, className || '')}
-            onClick={() => {
-              navigation(href);
-              toggleMenu?.();
-            }}
-          >
-            {label}
-          </Button>
-        ))}
-      </div>
     </div>
   );
 };
@@ -51,20 +74,21 @@ const Navbar = () => {
   return (
     <header className=" w-full max-w-full">
       <div className="container">
-        <div className="sub-container flex justify-between py-3 lg:py-6">
+        <div className="sub-container flex items-center justify-between">
           <NavLink to={'/'}>
-            <h2>Nouvels</h2>
-            <p>Let every project thrive</p>
+            <Logo className='h-12 2xl:h-24 w-auto' />
           </NavLink>
 
-          <div className="absolute top-4 right-6 md:hidden">
-            <Menu onClick={toggleMenu} />
-          </div>
-
           {/* Desktop Navigation */}
-          <nav className="hidden md:block absolute top-[100%] p-4 md:p-0 left-0 right-0 md:bg-transparent w-full md:bg-auto md:w-auto md:relative basis-[80%]">
+          <nav className="hidden md:block p-4">
             <NavigationLinks />
           </nav>
+
+          <div className="flex flex-aut lg:flex-grow-0 gap-3 navgroup">
+            <SearchDialog />
+            <ModeToggle />
+            <Button className="md:hidden" variant="outline" onClick={toggleMenu}><Menu /></Button>
+          </div>
 
           {/* Mobile Navigation */}
           {isMenuOpen && (
