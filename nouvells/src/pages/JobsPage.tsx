@@ -7,10 +7,11 @@ import { useState } from "react";
 
 const ServicesPage = () => {
     const [activeCategory, setActiveCategory] = useState(0);
+    // const [searchValue] = 
 
     return (
         <>
-            <Hero page='services' />
+            <Hero page='jobs' />
             <CategoriesSwiper activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
 
             {/* Second Search */}

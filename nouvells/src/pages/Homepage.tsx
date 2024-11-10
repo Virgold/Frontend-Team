@@ -29,7 +29,7 @@ const Homepage = () => {
       <Categories />
 
       {/* Job listing */}
-      <div className="flex justify-center">
+      <div className="flex justify-center"  id="coming-soon">
         <div className=" text-center container">
           <div className="sub-container">
             <span className="text-sm md:text-base lg:text-lg text-[#00347B] bg-accent py-3 px-3 md:px-6 rounded-3xl w-fit">
