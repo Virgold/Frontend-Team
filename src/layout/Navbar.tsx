@@ -76,7 +76,7 @@ const Navbar = () => {
       <div className="container">
         <div className="sub-container flex items-center justify-between">
           <NavLink to={'/'}>
-            <Logo className="w-32 lg:w-44 h-auto"/>
+            <Logo className="w-32 lg:w-44 h-auto" />
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -86,7 +86,7 @@ const Navbar = () => {
 
           <div className="flex flex-aut lg:flex-grow-0 gap-3 navgroup">
             <SearchDialog />
-            <ModeToggle />
+            {process.env.NODE_ENV === 'development' && <ModeToggle />}
             <Button className="md:hidden" variant="outline" onClick={toggleMenu}><Menu /></Button>
           </div>
 
