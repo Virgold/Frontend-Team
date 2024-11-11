@@ -1,6 +1,6 @@
-import { useState, useCallback, useEffect } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, X, ArrowRight } from 'lucide-react';
+import { Search, ArrowRight, CircleX } from 'lucide-react';
 import {
     Dialog,
     DialogContent,
@@ -21,7 +21,7 @@ interface SearchResult {
     score: number;
 }
 
-const SearchDialog = () => {
+const SearchDialog: React.FC = () => {
     const [open, setOpen] = useState<boolean>(false);
     const [query, setQuery] = useState<string>('');
     const [results, setResults] = useState<SearchResult[]>([]);
@@ -41,10 +41,10 @@ const SearchDialog = () => {
                 const searchableText = `${data.title} ${data.content} ${data.keywords.join(' ')} ${data.description}`.toLowerCase();
 
                 let score = 0;
-                searchTerms.forEach(term => {
+                searchTerms.forEach((term) => {
                     if (data.title.toLowerCase().includes(term)) score += 10;
-                    if (data.keywords.some(k => k.toLowerCase().includes(term))) score += 8;
-                    if (data.headings.some(h => h.toLowerCase().includes(term))) score += 6;
+                    if (data.keywords.some((k) => k.toLowerCase().includes(term))) score += 8;
+                    if (data.headings.some((h) => h.toLowerCase().includes(term))) score += 6;
                     if (data.description.toLowerCase().includes(term)) score += 4;
                     if (searchableText.includes(term)) score += 2;
                 });
@@ -54,10 +54,10 @@ const SearchDialog = () => {
                     title: data.title,
                     description: data.description,
                     preview: data.content.slice(0, 150) + '...',
-                    score
+                    score,
                 };
             })
-            .filter(item => item.score > 0)
+            .filter((item) => item.score > 0)
             .sort((a, b) => b.score - a.score)
             .slice(0, 5);
 
@@ -92,47 +92,49 @@ const SearchDialog = () => {
     };
 
     return (
-        <>
+        <div className='grow'>
             <Button
                 variant="outline"
                 className="w-full md:w-40 lg:w-64 justify-start text-sm text-muted-foreground relative"
                 onClick={() => setOpen(true)}
             >
                 <Search className="lg:mr-2 h-4 w-4" />
-                <span className="hidden lg:inline-flex">Nouvells...</span>
-                {/* <span className="inline-flex lg:hidden">Search</span> */}
+                <span className="hidden lg:inline-flex">nouvells...</span>
+                <span className="inline-flex lg:hidden">nouvells...</span>
                 <kbd className="absolute right-1.5 top-1.5 hidden h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100 sm:flex">
                     ⌘K
                 </kbd>
             </Button>
 
             <Dialog open={open} onOpenChange={setOpen}>
-                <DialogContent className="sm:max-w-2xl h-screen sm:h-auto">
+                <DialogContent className="max-h-[90vh] sm:max-h-[80vh] overflow-y-auto">
                     <DialogHeader>
                         <DialogTitle className="sr-only">Search</DialogTitle>
                     </DialogHeader>
                     <div className="flex items-center border-b pb-4">
-                        <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                        <Input
-                            placeholder="Type to search..."
-                            value={query}
-                            onChange={(e) => {
-                                setQuery(e.target.value);
-                                performSearch(e.target.value);
-                            }}
-                            className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0"
-                        />
+                        <div className="flex items-center space-x-2 flex-1">
+                            <Search className="h-5 w-5 shrink-0 opacity-50" />
+                            <Input
+                                placeholder="Type to search..."
+                                value={query}
+                                onChange={(e) => {
+                                    setQuery(e.target.value);
+                                    performSearch(e.target.value);
+                                }}
+                                className="border-0 focus-visible:ring-0 focus-visible:ring-offset-0 h-10 flex-1"
+                            />
+                        </div>
                         <Button
                             variant="ghost"
                             size="sm"
                             className="ml-2 h-6 w-6 p-0"
-                            onClick={() => setOpen(false)}
+                            onClick={() => setQuery('')}
                         >
-                            <X className="h-4 w-4" />
+                            <CircleX className="h-4 w-4" />
                         </Button>
                     </div>
 
-                    <ScrollArea className="max-h-[50vh] overflow-y-auto mt-4">
+                    <ScrollArea className="mt-4">
                         {results.length > 0 ? (
                             <div className="space-y-2">
                                 {results.map((result) => (
@@ -159,7 +161,7 @@ const SearchDialog = () => {
                     </ScrollArea>
                 </DialogContent>
             </Dialog>
-        </>
+        </div>
     );
 };
 
