@@ -2,95 +2,114 @@
 @tailwind components;
 @tailwind utilities;
 
-
-/* Optional italic styles */
+/* Font styles */
 .italic {
   font-style: italic;
 }
 
-
 @layer base {
   :root {
+    /* Fonts */
     --font-poppins: 'Poppins', sans-serif;
     --font-roboto: 'Roboto', sans-serif;
     --font-inter: 'Inter', sans-serif;
-    /* --font-custom: 'CustomFont', sans-serif; */
 
+    /* Base colors - Light mode */
     --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    --foreground: 215 25% 27%;
+
+    /* Surface colors */
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 215 25% 27%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    /* --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%; */
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
+    --popover-foreground: 215 25% 27%;
+
+    /* Brand colors */
+    /* --primary: 215 51% 36%; */
+    --primary: 215, 51%, 36%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 215 20% 96%;
+    --secondary-foreground: 215 25% 27%;
+
+    /* UI colors */
+    --muted: 215 20% 96%;
+    --muted-foreground: 215 15% 45%;
+    --accent: 215 20% 96%;
+    --accent-foreground: 215 25% 27%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
+
+    /* Component colors */
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 215 25% 27%;
+
+    /* Chart colors */
+    --chart-1: 215 70% 50%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
-    --radius: 0.5rem;
 
-    --primary: 215, 51%, 36%;
-    --light-blue: 215, 100%, 20%;
-    --accent: 0, 0%, 96%;
-    --background: 0, 0%, 100%;
-    --footer-background: 0, 0%, 26%;
-    --text: 0, 0%, 8%;
+    /* Light mode specific */
+    --light-blue: 215 100% 20%;
+    --footer-background: 0 0% 26%;
+    --text: 215 25% 27%;
+
+    /* Misc */
+    --radius: 0.5rem;
   }
 
   .dark {
-    --background: 0 0% 3.9%;
+    /* Base colors - Dark mode */
+    --background: 215 25% 10%;
     --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    /* --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%; */
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
 
-    --primary: 215, 51%, 36%;
-    --accent: 0, 0%, 96%;
-    /* --footer-background: 0, 0%, 26%; */
-    --footer-background: 0, 0%, 26%;
-    --footer-background: 0, 0%, 26%;
-    /* --card-bg: 0, 0%, 96%; */
+    /* Surface colors */
+    --card: 215 25% 12%;
+    --card-foreground: 0 0% 98%;
+    --popover: 215 25% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Brand colors - adjusted for dark mode */
+    --primary: 215 51% 56%;
+    --primary-foreground: 215 25% 12%;
+    --secondary: 215 25% 16%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* UI colors */
+    --muted: 215 25% 16%;
+    --muted-foreground: 215 15% 65%;
+    --accent: 215 25% 16%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Component colors */
+    --border: 215 25% 16%;
+    --input: 215 25% 16%;
+    --ring: 215 20% 83%;
+
+    /* Chart colors - adjusted for dark mode */
+    --chart-1: 220 70% 60%;
+    --chart-2: 160 60% 55%;
+    --chart-3: 30 80% 65%;
+    --chart-4: 280 65% 70%;
+    --chart-5: 340 75% 65%;
+
+    /* Dark mode specific */
+    --footer-background: 215 25% 16%;
+    --text: 0 0% 98%;
   }
 }
 
+/* Base styles */
 body {
   font-family: var(--font-poppins);
-  /* font-size: 100%; */
   font-size: 80%;
 }
 
+/* Font utilities */
 .font-poppins {
   font-family: var(--font-poppins);
 }
@@ -99,9 +118,6 @@ body {
   font-family: var(--font-roboto);
 }
 
-/* // <uniquifier>: Use a unique and descriptive class name
-// <weight>: Use a value from 100 to 900 */
-
 .font-inter-500 {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -109,27 +125,21 @@ body {
   font-style: normal;
 }
 
+/* Component styles */
 .swiper-wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 1rem; */
-  /* box-sizing: border-box; */
 }
 
 .section {
   padding: 2rem 1rem;
-  /* margin: 0 auto; */
-  /* max-width: 1200px; */
-  /* background-color: #f9f9f9; */
   border-radius: 8px;
 }
 
 .section+.section {
   margin-top: 2rem;
 }
-
-
 
 @layer base {
   * {
@@ -142,8 +152,7 @@ body {
 }
 
 @layer utilities {
-    .container {
-    /* @apply relative flex-1 px-[5%] mx-auto py-[2%] w-full; */
+  .container {
     @apply relative flex-1 w-full mx-auto;
     padding-left: clamp(1rem, 5%, 2rem);
     padding-right: clamp(1rem, 4%, 2rem);
