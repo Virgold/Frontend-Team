@@ -25,7 +25,7 @@ const Footer = () => {
 
   return (
     <footer className="w-full text-white lg:text-black">
-      <div className="container mx-auto bg-footer lg:bg-transparent rounded-3xl">
+      <div className="container mx-auto bg-footer lg:bg-transparent rounded-t-3xl">
         <div className="sub-container">
           <div className="flex flex-col md:flex-row justify-between items-center border-b-2 py-8 gap-8">
             {/* Logo */}
