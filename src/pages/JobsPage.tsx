@@ -1,5 +1,5 @@
-import CategoriesSwiper from "@/components/CategoriesSwiper"
-import Hero from "@/components/Hero"
+import CategoriesSwiper from "@/components/CategoriesSwiper";
+import Hero from "@/components/Hero";
 import JobsLists from "@/components/JobsLists";
 
 import { useEffect } from "react";
@@ -22,7 +22,7 @@ const JobsPage = () => {
         <>
             <Hero page='jobs' />
             <CategoriesSwiper searchQuery={searchQuery} />
-
+           
             <JobsLists searchQuery={searchQuery} />
         </>
     )

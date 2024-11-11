@@ -6,6 +6,7 @@ import JobsPage from "@/pages/JobsPage";
 import ServicesPage from "@/pages/ServicesPage";
 import UnderConstruction from "@/pages/UnderConstruction";
 import ComingSoon from "@/pages/ComingSoon";
+import ColorDemo from "@/components/colorDemo";
 // import Home from "./pages/Home";
 // import About from "./pages/About";
 // import Dashboard from "./pages/Dashboard";
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: 'under-construction',
                 element: <UnderConstruction />
+            },
+            {
+                path: 'colors',
+                element: <ColorDemo />
             },
             {
                 path: "*", // Catch-all route
