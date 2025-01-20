@@ -1,7 +1,7 @@
 import Categories from "@/components/Categories";
 import DreamJobBanner from "@/components/DreamJobBanner";
 import Hero from "@/components/Hero";
-import JobSteps from "@/components/JobSteps";
+// import JobSteps from "@/components/JobSteps";
 import PartnersSlider from "@/components/PartnersSlider";
 import TrustedSection from "@/components/TrustedSection";
 import { Button } from "@/components/ui/button";
@@ -11,14 +11,14 @@ import { useNavigate } from "react-router-dom";
 
 const Homepage = () => {
   const navigate = useNavigate();
-  
+
   return (
     <div className="min-w-full max-w-full w-full mx-auto">
       <Hero />
 
       <TrustedSection />
 
-      <section className="container">
+      {/* <section className="container">
         <div className="sub-container">
           <div className="w-full">
             <div className="lg:w-1/2 lg:max-w-1/2 mx-auto">
@@ -27,9 +27,9 @@ const Homepage = () => {
           </div>
           <JobSteps />
         </div>
-      </section>
+      </section> */}
 
-      <Categories />
+      {/* <Categories /> */}
 
       {/* Job listing */}
       <div className="flex justify-center" id="coming-soon">
@@ -41,7 +41,7 @@ const Homepage = () => {
             <p className="text-lg md:text-2xl lg:text-4xl mt-6 md:mt-8 mb-6 md:mb-8">
               Job Listings will appear here as soon as they are available
             </p>
-            <Button onClick={()=> navigate('/jobs')} className="px-6 py-2 md:px-8 md:py-3 text-white bg-primary hover:bg-secondary rounded-3xl transition-colors">
+            <Button onClick={() => navigate('/jobs')} className="px-6 py-2 md:px-8 md:py-3 text-white bg-primary hover:bg-secondary rounded-3xl transition-colors">
               Explore Jobs
             </Button>
           </div>
@@ -63,7 +63,7 @@ const Homepage = () => {
       </div>
 
 
-      <DreamJobBanner />
+      {/* <DreamJobBanner /> */}
     </div>
   )
 }
