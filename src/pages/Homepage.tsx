@@ -1,5 +1,5 @@
-import Categories from "@/components/Categories";
-import DreamJobBanner from "@/components/DreamJobBanner";
+// import Categories from "@/components/Categories";
+// import DreamJobBanner from "@/components/DreamJobBanner";
 import Hero from "@/components/Hero";
 // import JobSteps from "@/components/JobSteps";
 import PartnersSlider from "@/components/PartnersSlider";
