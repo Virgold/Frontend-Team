@@ -16,6 +16,7 @@ const Homepage = () => {
     <div className="min-w-full max-w-full w-full mx-auto">
       <Hero />
 
+      {/* Trusted Section */}
       <TrustedSection />
 
       {/* <section className="container">
