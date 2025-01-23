@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const JobSeekerIcon = ({ className }: { className: string }) => {
     return (
-        <motion.div drag initial={{ opacity: 0, transform: "translateX(-100px)" }} animate={{ opacity: 1, transform: "translateX(0px)" }} transition={{ duration: 1.5, type: 'spring' }} className={className}>
+        <motion.div initial={{ opacity: 0, transform: "translateX(-100px)" }} animate={{ opacity: 1, transform: "translateX(0px)" }} transition={{ duration: 1.5, type: 'spring' }} className={className}>
             <svg width="173" height="88" viewBox="0 0 173 88" fill="none" xmlns="http://www.w3.org/2000/svg" className={className}>
                 <path d="M171.809 0.894874C168.284 -2.90125 141.769 6.39793 141.791 9.79307C141.816 13.6431 152.146 14.8275 155.009 15.6307C156.731 16.1139 157.192 16.6089 157.589 18.4145C159.387 26.5914 160.29 30.6584 162.347 30.7495C165.627 30.8944 175.249 4.59955 171.809 0.894874Z" fill="#FF3D00" />
                 <rect width="141.792" height="56.375" rx="28.1875" transform="matrix(-1 0 0 1 146.791 26.75)" fill="#FF3D00" />
