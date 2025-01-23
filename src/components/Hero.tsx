@@ -7,6 +7,7 @@ import HiringManager from "@/assets/hiringManager";
 import { motion } from "motion/react";
 
 import bolt from '@/assets/homepage/bolt.svg';
+import ScrambleText from "./ScrambleText";
 
 const searchList = [
     { href: '/jobs?query=ui-ux', label: 'UI/UX Design' },
@@ -28,7 +29,8 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
     const messages = {
         home: 'Discover Your Perfect Job Match and Connect with Top Employers Today!',
         jobs: 'Explore Diverse Job Opportunities and Find the Role That Suits You Best...',
-        services: 'Browse Our Specialized Services Designed to Enhance Your Career Path'
+        services: 'Browse Our Specialized Services Designed to Enhance Your Career Path',
+        about: ''
     };
 
 
@@ -45,19 +47,24 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
 
             <div className={cn("container z-20 flex items-center justify-center")}>
                 <div className="sub-container flex items-center justify-center rounded">
-                    <div className="max-w-4xl w-full py-5 mx-auto flex flex-col">
-                        <div className="text-center mb-4">
+                    <div className="max-w-4xl w-full pb-5 pt-2 mx-auto flex flex-col">
+                        <div className="text-center mb-">
                             {page === 'home' && (
-                                <motion.span initial={{ scale: 0.1, opacity: 0 }}
-                                    whileHover={{ scale: 1.1 }} animate={{ opacity: 1, scale: 1 }}
-                                    transition={{
-                                        duration: 1.5,
-                                        type: 'spring',
-                                        stiffness: 50
+                                <motion.span
+                                    initial={{ scale: 0.1, opacity: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    whileHover={{
+                                        x: [0, -20, 20, -20, 0],
+                                        transition: {
+                                            duration: 2,
+                                            times: [0, 0.25, 0.5, 0.75, 1],
+                                            ease: "linear"
+                                        }
                                     }}
-                                    className="inline-block w-fit px-4 lg:px-8 lg:mb-16 py-3 rounded-3xl bg-accent text-[#002A64] text-sm"
+                                    transition={{ duration: 3.5, type: 'spring', stiffness: 50 }}
+                                    className="inline-block w-fit px-4 lg:px-8 lg:mb-1 py-3 rounded-3xl bg-accent text-blue-900 text-sm"
                                 >
-                                    <img className="inline" src={bolt} alt="hhh" />
+                                    <img className="inline" src={bolt} alt="bolt" />
                                     <span className="px-3">Mobile app launching soon</span> 🚀
                                 </motion.span>
                             )}
@@ -69,7 +76,7 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
                         </h1>
                         <p className="mt-8 text-center text-xs md:text-2xl lg:text-3xl mb-16 font-medium text-gray-700">
                             {page === 'home' && (
-                                'Explore Opportunities, Build Connections, and Advance Your Career'
+                                <ScrambleText>{'Explore Opportunities, Build Connections, and Advance Your Career'}</ScrambleText>
                             )}
                         </p>
 
@@ -81,7 +88,7 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
                                     {searchList.map(({ href, label }) => (
                                         <li key={href} className="flex justify-center">
                                             <Link
-                                                className='text-xs sm:text-sm md:text-base lg:text-sm rounded-full px-3 py-1 md:px-4 md:py-2 transition-colors duration-300 bg-slate-200 hover:bg-green-400'
+                                                className='text-xs sm:text-sm md:text-base lg:text-sm rounded-full px-3 py-1 md:px-4 md:py-2 transition-all duration-300 bg-slate-200 hover:bg-green-400 hover:scale-110'
                                                 to={href}
                                             >
                                                 {label}
