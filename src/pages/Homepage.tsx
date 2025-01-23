@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 
 import bolt from '@/assets/homepage/bolt.svg';
 import { useNavigate } from "react-router-dom";
+import DreamJobBanner from "@/components/DreamJobBanner";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -64,7 +65,7 @@ const Homepage = () => {
       </div>
 
 
-      {/* <DreamJobBanner /> */}
+      <DreamJobBanner />
     </div>
   )
 }
