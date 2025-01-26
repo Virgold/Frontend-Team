@@ -7,7 +7,6 @@ import HiringManager from "@/assets/hiringManager";
 import { motion } from "motion/react";
 
 import bolt from '@/assets/homepage/bolt.svg';
-import ScrambleText from "./ScrambleText";
 
 const searchList = [
     { href: '/jobs?query=ui-ux', label: 'UI/UX Design' },
@@ -24,13 +23,13 @@ const searchList = [
     { href: '/jobs?query=seo-specialist', label: 'SEO Specialist' },
 ];
 
-const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
+const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' | 'about' }) => {
 
     const messages = {
         home: 'Discover Your Perfect Job Match and Connect with Top Employers Today!',
         jobs: 'Explore Diverse Job Opportunities and Find the Role That Suits You Best...',
         services: 'Browse Our Specialized Services Designed to Enhance Your Career Path',
-        about: ''
+        about: 'Connecting You with the Top 1% of Experts',
     };
 
 
@@ -76,7 +75,11 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
                         </h1>
                         <p className="mt-8 text-center text-xs md:text-2xl lg:text-3xl mb-16 font-medium text-gray-700">
                             {page === 'home' && (
-                                <ScrambleText>{'Explore Opportunities, Build Connections, and Advance Your Career'}</ScrambleText>
+                                <span>Explore Opportunities, Build Connections, and Advance Your Career'</span>
+                            )}
+
+                            {page === 'about' && (
+                                <span>Empowering businesses with elite talent and unparalleled expertise to drive success.</span>
                             )}
                         </p>
 
