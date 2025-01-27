@@ -67,7 +67,6 @@ const SectionCard: React.FC<SectionCardProps> = ({
 
 const FeatureCard = ({ className, title, description }: { className?: string, title: string, description: string }) => {
     const backgroundColor = getColorFromString(title + description + className);
-    alert(backgroundColor)
 
     return (
         <Card className={`w-full py-7 flex flex-col items-center justify-between max-w-sm flex-grow basis-[300px] outline-none border-none bg-secondary/100 rounded-3xl hover:shadow-lg transition-shadow ${backgroundColor} bg-opacity-5`}>
