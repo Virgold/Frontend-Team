@@ -11,99 +11,23 @@ import useDisplayCount from "@/contexts/screenResize";
 import { getservices } from "@/actions/services.actions";
 import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
-import * as Icons from 'lucide-react';
+import { getColorFromString, getIconFromString } from "@/lib/utils";
 
-const generateHash = (str: string): number => {
-    let hash = 0;
-    for (let i = 0; i < str.length; i++) {
-        const char = str.charCodeAt(i);
-        hash = (hash << 7) ^ (hash >> 3) ^ char;
-        hash = Math.abs(hash * 31 + char);
-    }
-    return hash;
-};
-
-const getColorFromString = (str: string) => {
-    const colors = [
-        'bg-blue-500',      // Bold blue
-        'bg-green-500',     // Vibrant green
-        'bg-purple-500',    // Rich purple
-        'bg-pink-500',      // Bright pink
-        'bg-indigo-500',    // Deep indigo
-        'bg-teal-500',      // Distinct teal
-        'bg-cyan-500',      // Light cyan
-        'bg-orange-500',    // Bold orange
-        'bg-yellow-500',    // Bright yellow
-        'bg-red-500',       // Strong red
-        'bg-lime-500',      // Light lime green
-        'bg-amber-500',     // Warm amber
-        'bg-emerald-500',   // Soft emerald green
-        'bg-fuchsia-500',   // Vivid fuchsia
-        'bg-sky-500',       // Light sky blue
-        'bg-rose-500'       // Soft rose
-    ];
-
-    const hash = generateHash(str);
-    return colors[hash % colors.length];
-};
-
-const getIconFromString = (str: string) => {
-    const iconNames = [
-        'Boxes',
-        'Building',
-        'Code',
-        'Coffee',
-        'Database',
-        'FileText',
-        'Globe',
-        'Heart',
-        'Layout',
-        'MessageCircle',
-        'Phone',
-        'Search',
-        'Settings',
-        'Shield',
-        'Star',
-        'Users'
-    ] as const;
-
-    const hash = generateHash(str);
-
-    const iconName = iconNames[hash % iconNames.length];
-    return Icons[iconName];
-};
-
-interface Service {
-    icon?: string;
-    title: string;
-    description: string
-}
-
-const ServiceIcon = ({ service, backgroundColor }: { service: Service, backgroundColor: string }) => {
-    if (service.icon) {
-        return (
-            <div className={`p-5 rounded-full ${backgroundColor}`}>
-                <img src={service.icon} alt={`${service.title} icon`} className="w-8 h-8" />
-            </div>
-        );
-    }
-
-    const IconComponent = getIconFromString(service.title);
+export const ServiceIcon = ({ title, backgroundColor }: { title: string, backgroundColor: string }) => {
+    const IconComponent = getIconFromString(title);
 
     return (
         <div className={`p-5 rounded-full ${backgroundColor}`}>
             <IconComponent className="w-8 h-8 text-white" />
         </div>
-    );
+    )
 };
-
 
 const ServiceCard = ({ service }: { service: Service }) => {
     const backgroundColor = getColorFromString(service.title);
-    console.log(backgroundColor, 'color')
     return (
         <Card className={`w-full py-7 flex flex-col items-center justify-between max-w-sm flex-grow basis-[300px] outline-none border-none bg-secondary/100 rounded-3xl hover:shadow-lg transition-shadow ${backgroundColor} bg-opacity-5`}>
-            <ServiceIcon service={service} backgroundColor={backgroundColor} />
+            <ServiceIcon title={service.title} backgroundColor={backgroundColor} />
             <CardHeader>
                 <CardTitle>{service.title}</CardTitle>
             </CardHeader>
