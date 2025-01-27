@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import bolt from '@/assets/homepage/bolt.svg';
 import { useNavigate } from "react-router-dom";
 import DreamJobBanner from "@/components/DreamJobBanner";
+import JoinWaitlistForm from "@/components/ui/WaitlistForm";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -49,6 +50,8 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+
+      <JoinWaitlistForm/>
 
 
       {/* Partners */}

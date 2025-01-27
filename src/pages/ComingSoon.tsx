@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { Clock } from 'lucide-react';
-import ContactForm from '@/components/ContactForm';
+import ContactForm from '@/components/ContactForms';
 
 const ComingSoon = () => {
     const navigate = useNavigate();
