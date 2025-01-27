@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import personImage from '@/assets/homepage/happyGirl.svg'
 import bgPattern from '@/assets/homepage/job-pattern-bg.svg'
 import { useNavigate } from "react-router-dom";
 

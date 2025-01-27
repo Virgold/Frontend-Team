@@ -7,7 +7,7 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import { ServiceIcon } from '@/components/ServicesList';
-import { cn, getColorFromString } from '@/lib/utils';
+import { getColorFromString } from '@/lib/utils';
 import ContactForm from '@/components/ui/ContactForm';
 
 // const SectionCard = ({ className, title, description, buttonText, buttonLink }: { className?: string, title: string, description: [string, string], buttonText: string, buttonLink: string }) => {
