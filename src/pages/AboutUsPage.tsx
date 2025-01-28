@@ -54,12 +54,16 @@ const SectionCard: React.FC<SectionCardProps> = ({
             </div>
 
             {/* Button */}
-            <Link
-                to={buttonLink}
-                className="mt-6 inline-block text-center bg-blue-600 text-white py-3 px-6 rounded-lg text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed justify-center duration-300"
-            >
-                {buttonText}
-            </Link>
+            {
+                buttonText && buttonLink && (
+                    <Link
+                        to={buttonLink}
+                        className="mt-6 inline-block text-center bg-blue-600 text-white py-3 px-6 rounded-lg text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed justify-center duration-300"
+                    >
+                        {buttonText}
+                    </Link>
+                )
+            }
         </div>
     );
 };
@@ -99,10 +103,10 @@ const AboutUsPage: React.FC = () => {
     return (
         <>
             <Hero page="about" />
-            <section className="container mx-auto px-4 py-12">
+            <section className="container mx-auto">
                 <div className="max-w-7xl mx-auto">
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:my-8">
                         <SectionCard
                             className="bg-[#f9fdf3] rounded-3xl flex flex-col space-between"
                             title="Who We Are"
@@ -159,14 +163,12 @@ const AboutUsPage: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
                         <SectionCard
-                            className='bg-[#F0F0F0] rounded-3xl'
+                            className='bg-[#F0F0F0] rounded-3xl min-h-[60vh]'
                             title="Our Culture"
                             description={[
                                 "At Nouvells, we embrace a remote work culture, offering our team the flexibility to work from anywhere.",
                                 "We understand the importance of flexibility and work-life balance. Our Remote Workplace Policy ensures our employees can thrive both professionally and personally."
                             ]}
-                            buttonText="Join Our Team"
-                            buttonLink="/careers"
                         />
 
                         <SectionCard
@@ -176,8 +178,6 @@ const AboutUsPage: React.FC = () => {
                                 "Founded in 2023, Nouvells was born out of a vision to revolutionize how businesses and experts connect.",
                                 "From our humble beginnings, we have grown into a trusted platform for businesses and professionals alike, driven by innovation and a commitment to excellence."
                             ]}
-                            buttonText="Read More"
-                            buttonLink="/about"
                         />
                     </div>
                 </div>
