@@ -1,3 +1,5 @@
+import { hover } from 'motion/react';
+
 /** @type {import('tailwindcss').Config} */
 export default {
 	darkMode: ["class"],
@@ -30,7 +32,8 @@ export default {
 				// Brand colors
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -67,8 +70,9 @@ export default {
 
 				// random
 				footer: 'hsl(var(--footer-background))',
+				blueHover: '#2454b2'
 			}
-		}
-	},
-	plugins: [require("tailwindcss-animate")],
+	}
+},
+plugins: [require("tailwindcss-animate")],
 }

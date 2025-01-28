@@ -69,42 +69,6 @@ const JoinWaitlistForm = () => {
                 onSubmit={sendEmail}
                 className="rounded-lg p-6 space-y-6"
             >
-                <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                        <label
-                            htmlFor="firstName"
-                            className="block text-sm text-left font-medium text-gray-700 mb-1"
-                        >
-                            First Name
-                        </label>
-                        <input
-                            type="text"
-                            id="firstName"
-                            name="firstName"
-                            required
-                            minLength={2}
-                            maxLength={50}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                    </div>
-                    <div>
-                        <label
-                            htmlFor="lastName"
-                            className="block text-sm text-left font-medium text-gray-700 mb-1"
-                        >
-                            Last Name
-                        </label>
-                        <input
-                            type="text"
-                            id="lastName"
-                            name="lastName"
-                            required
-                            minLength={2}
-                            maxLength={50}
-                            className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                    </div>
-                </div>
 
                 <div>
                     <label
@@ -117,6 +81,7 @@ const JoinWaitlistForm = () => {
                         type="email"
                         id="user_email"
                         name="user_email"
+                        placeholder='contact@nouvells.com'
                         required
                         pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -126,7 +91,7 @@ const JoinWaitlistForm = () => {
                 <button
                     type="submit"
                     disabled={isLoading}
-                    className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                    className="w-full bg-primary text-white py-3 px-6 rounded-lg hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                     {isLoading ? (
                         <>

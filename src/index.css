@@ -28,6 +28,7 @@
     /* --primary: 215 51% 36%; */
     --primary: 215, 51%, 36%;
     --primary-foreground: 0 0% 98%;
+    --primary-hover: 220 66% 42%;
     --secondary: 215 20% 96%;
     --secondary-foreground: 215 25% 27%;
 

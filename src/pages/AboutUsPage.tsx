@@ -58,7 +58,7 @@ const SectionCard: React.FC<SectionCardProps> = ({
                 buttonText && buttonLink && (
                     <Link
                         to={buttonLink}
-                        className="mt-6 inline-block text-center bg-blue-600 text-white py-3 px-6 rounded-lg text-sm font-medium hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed justify-center duration-300"
+                        className="mt-6 inline-block text-center bg-primary text-white py-3 px-6 rounded-lg text-sm font-medium hover:bg-primary-hover focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed justify-center duration-300"
                     >
                         {buttonText}
                     </Link>
@@ -157,7 +157,7 @@ const AboutUsPage: React.FC = () => {
                         </div>
                         <Link
                             to="/services"
-                            className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition duration-300"
+                            className="inline-block bg-primary text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-primary-hover transition duration-300"
                         >
                             Get Started
                         </Link>
