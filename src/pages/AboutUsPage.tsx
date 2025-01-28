@@ -127,31 +127,33 @@ const AboutUsPage: React.FC = () => {
 
                     <div className="w-full text-center my-24">
                         <h2 className="font-medium text-2xl lg:text-4xl text-gray-800 mb-6">Why Choose Us?</h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                            {[
-                                {
-                                    className: "bg-[#fbf6ff]",
-                                    title: "Elite Network",
-                                    description: "Access the top 1% of experts in your industry, carefully curated to meet your needs."
-                                },
-                                {
-                                    className: 'bg-[#f7f7ff]',
-                                    title: "Seamless Process",
-                                    description: "Our platform simplifies hiring and job searching, saving you time and effort."
-                                },
-                                {
-                                    className: 'bg-[#f9fdf3]',
-                                    title: "Commitment to Success",
-                                    description: "We are dedicated to driving your business or career forward with unmatched expertise."
-                                }
-                            ].map((feature, index) => (
-                                <FeatureCard
-                                    key={index}
-                                    title={feature.title}
-                                    description={feature.description}
-                                    className={feature.className}
-                                />
-                            ))}
+                        <div className="flex justify-center">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8 mx-auto max-w-screen-lg">
+                                {[
+                                    {
+                                        className: "bg-[#fbf6ff]",
+                                        title: "Elite Network",
+                                        description: "Access the top 1% of experts in your industry, carefully curated to meet your needs."
+                                    },
+                                    {
+                                        className: 'bg-[#f7f7ff]',
+                                        title: "Seamless Process",
+                                        description: "Our platform simplifies hiring and job searching, saving you time and effort."
+                                    },
+                                    {
+                                        className: 'bg-[#f9fdf3]',
+                                        title: "Commitment to Success",
+                                        description: "We are dedicated to driving your business or career forward with unmatched expertise."
+                                    }
+                                ].map((feature, index) => (
+                                    <FeatureCard
+                                        key={index}
+                                        title={feature.title}
+                                        description={feature.description}
+                                        className={feature.className}
+                                    />
+                                ))}
+                            </div>
                         </div>
                         <Link
                             to="/services"
@@ -163,7 +165,7 @@ const AboutUsPage: React.FC = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
                         <SectionCard
-                            className='bg-[#F0F0F0] rounded-3xl min-h-[60vh]'
+                            className='bg-[#F0F0F0] rounded-3xl min-h-[50vh] lg:min-h-[60vh]'
                             title="Our Culture"
                             description={[
                                 "At Nouvells, we embrace a remote work culture, offering our team the flexibility to work from anywhere.",
@@ -172,7 +174,7 @@ const AboutUsPage: React.FC = () => {
                         />
 
                         <SectionCard
-                            className='bg-[#f7f7ff] rounded-3xl'
+                            className='bg-[#f7f7ff] rounded-3xl min-h-[50vh] lg:min-h-[60vh]'
                             title="Our Story"
                             description={[
                                 "Founded in 2023, Nouvells was born out of a vision to revolutionize how businesses and experts connect.",
