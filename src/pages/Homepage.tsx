@@ -44,7 +44,7 @@ const Homepage = () => {
             <p className="text-lg md:text-2xl lg:text-4xl mt-6 md:mt-8 mb-6 md:mb-8">
               Job Listings will appear here as soon as they are available
             </p>
-            <Button onClick={() => navigate('/jobs')} className="px-6 py-2 md:px-8 md:py-3 text-white bg-primary hover:bg-secondary rounded-3xl transition-colors">
+            <Button onClick={() => navigate('/jobs')} className="px-6 py-2 md:px-8 md:py-3 text-white bg-primary hover:bg-primary-hover rounded-3xl transition-colors">
               Explore Jobs
             </Button>
           </div>
