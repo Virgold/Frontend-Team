@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
 import JobSeekerIcon from "@/assets/jobSeekerIcon";
 import HiringManager from "@/assets/hiringManager";
+import { motion } from "motion/react";
 
 import bolt from '@/assets/homepage/bolt.svg';
 
@@ -22,17 +23,19 @@ const searchList = [
     { href: '/jobs?query=seo-specialist', label: 'SEO Specialist' },
 ];
 
-const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
+const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' | 'about' }) => {
 
     const messages = {
         home: 'Discover Your Perfect Job Match and Connect with Top Employers Today!',
         jobs: 'Explore Diverse Job Opportunities and Find the Role That Suits You Best...',
-        services: 'Browse Our Specialized Services Designed to Enhance Your Career Path'
+        services: 'Browse Our Specialized Services Designed to Enhance Your Career Path',
+        about: 'Connecting You with the Top 1% of Experts',
     };
 
 
     return (
-        <div className="overflow-hidden -top-4 relative">
+        <motion.div
+            className="overflow-hidden -top-4 relative">
             <div
                 className={cn(
                     "absolute inset-0 z-10 w-full overflow-hidden sub-container top-0 left-0 right-0 bottom-0")}
@@ -43,12 +46,26 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
 
             <div className={cn("container z-20 flex items-center justify-center")}>
                 <div className="sub-container flex items-center justify-center rounded">
-                    <div className="max-w-4xl w-full py-5 mx-auto flex flex-col">
-                        <div className="text-center mb-4">
+                    <div className="max-w-4xl w-full pb-5 pt-2 mx-auto flex flex-col">
+                        <div className="text-center mb-">
                             {page === 'home' && (
-                                <span className="w-full px-4 lg:px-8 lg:mb-16 py-3 rounded-3xl bg-accent text-[#002A64] text-sm">
-                                    <img className="inline" src={bolt} alt="hhh" /> <span className="px-3">Mobile app launching soon</span> 🚀
-                                </span>
+                                <motion.span
+                                    initial={{ scale: 0.1, opacity: 0 }}
+                                    animate={{ opacity: 1, scale: 1 }}
+                                    whileHover={{
+                                        x: [0, -20, 20, -20, 0],
+                                        transition: {
+                                            duration: 2,
+                                            times: [0, 0.25, 0.5, 0.75, 1],
+                                            ease: "linear"
+                                        }
+                                    }}
+                                    transition={{ duration: 3.5, type: 'spring', stiffness: 50 }}
+                                    className="inline-block w-fit px-4 lg:px-8 lg:mb-1 py-3 rounded-3xl bg-accent text-blue-900 text-sm"
+                                >
+                                    <img className="inline" src={bolt} alt="bolt" />
+                                    <span className="px-3">Mobile app launching soon</span> 🚀
+                                </motion.span>
                             )}
                         </div>
                         <h1 className={cn("text-lg md:text-3xl lg:text-5xl lg:leading-[75.4px] text-center font-normal lg:font-medium",
@@ -58,7 +75,11 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
                         </h1>
                         <p className="mt-8 text-center text-xs md:text-2xl lg:text-3xl mb-16 font-medium text-gray-700">
                             {page === 'home' && (
-                                'Explore Opportunities, Build Connections, and Advance Your Career'
+                                <span>Explore Opportunities, Build Connections, and Advance Your Career'</span>
+                            )}
+
+                            {page === 'about' && (
+                                <span>Empowering businesses with elite talent and unparalleled expertise to drive success.</span>
                             )}
                         </p>
 
@@ -70,7 +91,7 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
                                     {searchList.map(({ href, label }) => (
                                         <li key={href} className="flex justify-center">
                                             <Link
-                                                className='text-xs sm:text-sm md:text-base lg:text-sm rounded-full px-3 py-1 md:px-4 md:py-2 transition-colors duration-300 bg-slate-200 hover:bg-green-400'
+                                                className='text-xs sm:text-sm md:text-base lg:text-sm rounded-full px-3 py-1 md:px-4 md:py-2 transition-all duration-300 bg-slate-200 hover:bg-green-400 hover:scale-110'
                                                 to={href}
                                             >
                                                 {label}
@@ -80,13 +101,13 @@ const Hero = ({ page = 'home' }: { page?: 'home' | 'services' | 'jobs' }) => {
                                 </ul>
                             </div>
                         )}
-
                     </div>
+
                     <JobSeekerIcon className="hidden lg:block w-20 lg:w-28 absolute top-2/4 left-4 lg:left-12" />
                     <HiringManager className="hidden lg:block w-28 lg:w-40 absolute top-[15%] right-0" />
                 </div>
             </div>
-        </div >
+        </motion.div >
     );
 }
 

@@ -4,14 +4,10 @@ import Homepage from "@/pages/Homepage";
 import NotFound from "@/pages/NotFound";
 import JobsPage from "@/pages/JobsPage";
 import ServicesPage from "@/pages/ServicesPage";
+import AboutUsPage from "@/pages/AboutUsPage";
 import UnderConstruction from "@/pages/UnderConstruction";
 import ComingSoon from "@/pages/ComingSoon";
 import ColorDemo from "@/components/colorDemo";
-// import Home from "./pages/Home";
-// import About from "./pages/About";
-// import Dashboard from "./pages/Dashboard";
-// import Profile from "./pages/Profile";
-// import Settings from "./pages/Settings";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +26,10 @@ const router = createBrowserRouter([
             {
                 path: 'services',
                 element: <ServicesPage />
+            },
+            {
+                path: 'about',
+                element: <AboutUsPage />
             },
             {
                 path: 'coming-soon',

@@ -22,14 +22,6 @@ const Categories = () => {
         <section className='container'>
             <div className="sub-container">
                 <h2 className="text-center text-3xl lg:text-4xl font-medium mb-8">Browse Categories</h2>
-                {/* <div className="mt-8">
-                    <div className="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] lg:grid-cols-3 gap-6">
-                        {categoriesData.map((categoryData, index) => (
-                            <CategoryCard key={index} categoryData={categoryData} />
-                        ))}
-                    </div>
-                </div> */}
-
                 <div className="flex flex-wrap justify-center gap-6">
                     {categoriesData.map((categoryData, index) => (
                         <CategoryCard key={index} categoryData={categoryData} />
