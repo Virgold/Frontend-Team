@@ -8,6 +8,6 @@ interface SectionCardProps {
     className?: string;
     title: string;
     description: string[];
-    buttonText: string;
-    buttonLink: string;
+    buttonText?: string;
+    buttonLink?: string;
 }
