@@ -46,7 +46,7 @@ const SearchBar = () => {
                     onClick={handleSearch}
                     className="px-4 py-1.5
                     rounded-full 
-                    bg-[#2D63D1] hover:bg-[#2454b2] 
+                    bg-primary hover:bg-primary-hover
                     text-white font-medium 
                     text-sm
                     whitespace-nowrap
