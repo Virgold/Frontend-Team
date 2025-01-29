@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { ToastAction } from './toast';
 
 const ContactUs = () => {
     const form = useRef<HTMLFormElement>(null);
@@ -36,26 +37,33 @@ const ContactUs = () => {
                 throw new Error('Form reference is not available');
             }
 
-            await emailjs.sendForm(
+            await emailjs.send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
-                form.current,
                 {
-                    publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-                }
+                    to_name: import.meta.env.VITE_EMAILJS_TO_NAME,
+                    from_name: form.current.firstName.value + ' ' + form.current.lastName.value,
+                    message: form.current.message.value,
+                    reply_to: form.current.user_email.value,
+                },
+                import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
             );
 
             toast({
-                title: "Sent: Catch up",
+                variant:"default",
+                title: "Sent!",
                 description: "Message sent successfully! We'll get back to you soon.",
             })
 
             form.current.reset();
 
-        } catch (_) {
+            // eslint-disable-next-line @typescript-eslint/no-unused-vars
+        } catch (_error) {
             toast({
-                title: "Not Sent",
+                variant: "destructive",
+                title: "Uh oh! Something went wrong.",
                 description: "Failed to send message. Please try again later or contact us directly.",
+                action: <ToastAction altText="Try again">Try again</ToastAction>,
             })
         } finally {
             setIsLoading(false);
@@ -119,7 +127,7 @@ const ContactUs = () => {
                         id="user_email"
                         name="user_email"
                         required
-                        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        pattern="[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[cC][oO][mM](:[0-9]{1,5})?"
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                 </div>
