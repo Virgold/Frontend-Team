@@ -51,7 +51,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      <JoinWaitlistForm/>
+      <JoinWaitlistForm />
 
 
       {/* Partners */}

@@ -14,7 +14,7 @@ import { ArrowRight } from "lucide-react";
 import { getColorFromString, getIconFromString } from "@/lib/utils";
 
 export const ServiceIcon = ({ title, backgroundColor }: { title: string, backgroundColor: string }) => {
-    const IconComponent = getIconFromString(title);
+    const IconComponent = getIconFromString(title + backgroundColor + 'icon');
 
     return (
         <div className={`p-5 rounded-full ${backgroundColor}`}>
