@@ -18,6 +18,17 @@ const firebaseConfig = {
   measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID,
 };
 
+// const firebaseConfig = {
+//   apiKey: "AIzaSyBoQYj6f7cupH_nX53HB8mw1PUXYwHSUmA",
+//   authDomain: "nouvells-waitlist.firebaseapp.com",
+//   databaseURL: "https://nouvells-waitlist-default-rtdb.firebaseio.com",
+//   projectId: "nouvells-waitlist",
+//   storageBucket: "nouvells-waitlist.firebasestorage.app",
+//   messagingSenderId: "79711553322",
+//   appId: "1:79711553322:web:66565e2caa2f4ef37bc053",
+//   measurementId: "G-ZYKBPD9W8C",
+// };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
