@@ -6,10 +6,11 @@ import PartnersSlider from "@/components/PartnersSlider";
 import TrustedSection from "@/components/TrustedSection";
 import { Button } from "@/components/ui/button";
 
-import bolt from '@/assets/homepage/bolt.svg';
+import bolt from "@/assets/homepage/bolt.svg";
 import { useNavigate } from "react-router-dom";
 import DreamJobBanner from "@/components/DreamJobBanner";
 import JoinWaitlistForm from "@/components/ui/WaitlistForm";
+import NewWaitlistForm from "@/components/ui/NewWaitlist";
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -39,20 +40,24 @@ const Homepage = () => {
         <div className=" text-center container">
           <div className="sub-container">
             <span className="text-sm md:text-base lg:text-lg text-[#00347B] bg-accent py-3 px-3 md:px-6 rounded-3xl w-fit">
-              <img className="inline" src={bolt} alt={'bolt icon'} /> <span className="px-3">Coming Soon</span> 🥳 🥳
+              <img className="inline" src={bolt} alt={"bolt icon"} />{" "}
+              <span className="px-3">Coming Soon</span> 🥳 🥳
             </span>
             <p className="text-lg md:text-2xl lg:text-4xl mt-6 md:mt-8 mb-6 md:mb-8">
               Job Listings will appear here as soon as they are available
             </p>
-            <Button onClick={() => navigate('/jobs')} className="px-6 py-2 md:px-8 md:py-3 text-white bg-primary hover:bg-primary-hover rounded-3xl transition-colors">
+            <Button
+              onClick={() => navigate("/jobs")}
+              className="px-6 py-2 md:px-8 md:py-3 text-white bg-primary hover:bg-primary-hover rounded-3xl transition-colors"
+            >
               Explore Jobs
             </Button>
           </div>
         </div>
       </div>
 
-      <JoinWaitlistForm />
-
+      {/* <JoinWaitlistForm /> */}
+      <NewWaitlistForm />
 
       {/* Partners */}
       <div className="container" id="partners">
@@ -67,10 +72,9 @@ const Homepage = () => {
         </div>
       </div>
 
-
       <DreamJobBanner />
     </div>
-  )
-}
+  );
+};
 
 export default Homepage;

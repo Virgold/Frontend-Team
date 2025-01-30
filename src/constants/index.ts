@@ -1,33 +1,34 @@
 import { ThemeProviderState } from "@/components/theme/theme-provider";
 
 export const initialState: ThemeProviderState = {
-    theme: "system",
-    setTheme: () => null,
-}
+  theme: "system",
+  setTheme: () => null,
+};
 
 export const NAVLINKS = [
-    { href: '/jobs', label: 'Jobs' },
-    {href:'/about', label:'About'},
-    { href: '/services', label: 'Services' },
-    // { href: '/#coming-soon', label: 'Pricing' }
+  { href: "/", label: "Home" },
+  { href: "/jobs", label: "Jobs" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  // { href: '/#coming-soon', label: 'Pricing' }
 ];
 
 export const JOB_CATEGORIES = [
-    'All Jobs',
-    'Graphics & Design',
-    'Programming & Tech',
-    'Development',
-    'Digital Marketing',
-    'IT & Consultancy',
-    'Business',
-    'Lifestyle',
-    'Writing',
-    'Music & Audio',
-    'Video & Animation',
+  "All Jobs",
+  "Graphics & Design",
+  "Programming & Tech",
+  "Development",
+  "Digital Marketing",
+  "IT & Consultancy",
+  "Business",
+  "Lifestyle",
+  "Writing",
+  "Music & Audio",
+  "Video & Animation",
 ];
 
 export enum JOB_DISPLAY_COUNT {
-    large = 9,
-    tablet = 6,
-    small = 3
+  large = 9,
+  tablet = 6,
+  small = 3,
 }
