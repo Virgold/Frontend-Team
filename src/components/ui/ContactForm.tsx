@@ -50,7 +50,6 @@ const ContactUs = () => {
             );
 
             toast({
-                variant:"default",
                 title: "Sent!",
                 description: "Message sent successfully! We'll get back to you soon.",
             })

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db } from "../../firebase"; // Import Firebase
+import { db } from '@/firebase';
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { Loader2 } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -20,7 +20,6 @@ const NewWaitlistForm: React.FC = () => {
         email: email,
         timestamp: serverTimestamp(),
       });
-      setIsLoading(false);
 
       toast({
         title: "Success!",
@@ -28,18 +27,22 @@ const NewWaitlistForm: React.FC = () => {
           "You've been added to the waitlist. We'll notify you when we launch!",
       });
       setEmail("");
+
     } catch (error) {
       toast({
+        variant: 'destructive',
         title: "Error",
-        description: "Error submitting your email. Please try again later.",
+        description: "Error submitting your email. Please try again later",
       });
 
       console.error("Error adding document: ", error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6">
+    <div className="max-w-lg mx-auto p-6" id="waitlist">
       <form onSubmit={handleSubmit} className="rounded-lg p-6 space-y-6">
         <div>
           <label
@@ -56,7 +59,7 @@ const NewWaitlistForm: React.FC = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            pattern="[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[cC][oO][mM](:[0-9]{1,5})?"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
           />
         </div>

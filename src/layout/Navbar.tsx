@@ -36,10 +36,11 @@ const NavigationLinks = ({ className = '', toggleMenu }: { className?: string; t
   };
 
   const isActive = (href: string, label: string) => {
+
     if (href.startsWith('/#')) {
-      return activeLabel === label;
+      return activeLabel === label || activeLabel === 'waitlist';
     }
-    return location.pathname === href;
+    return location.pathname === href && !activeLabel;
   };
 
 
