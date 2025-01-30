@@ -173,7 +173,7 @@ const AboutUsPage: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
             <SectionCard
-              className="bg-[#F0F0F0] rounded-3xl min-h-[20vh] lg:min-h-[40vh]"
+              className="bg-[#F0F0F0] rounded-3xl min-h-[20vh] lg:min-h-[50vh]"
               title="Our Culture"
               description={[
                 "At Nouvells, we embrace a remote work culture, offering our team the flexibility to work from anywhere.",
@@ -182,7 +182,7 @@ const AboutUsPage: React.FC = () => {
             />
 
             <SectionCard
-              className="bg-[#f7f7ff] rounded-3xl min-h-[20vh] lg:min-h-[40vh]"
+              className="bg-[#f7f7ff] rounded-3xl min-h-[20vh] lg:min-h-[50vh]"
               title="Our Story"
               description={[
                 "Founded in 2023, Nouvells was born out of a vision to revolutionize how businesses and experts connect.",
