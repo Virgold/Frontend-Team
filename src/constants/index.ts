@@ -7,7 +7,8 @@ export const initialState: ThemeProviderState = {
 
 export const NAVLINKS = [
   { href: "/", label: "Home" },
-  { href: "/jobs", label: "Jobs" },
+  // { href: "/jobs", label: "Jobs" },
+  { href: "/#waitlist", label: "Jobs" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
   // { href: '/#coming-soon', label: 'Pricing' }

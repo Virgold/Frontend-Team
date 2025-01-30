@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button";
 import bolt from "@/assets/homepage/bolt.svg";
 import { useNavigate } from "react-router-dom";
 import DreamJobBanner from "@/components/DreamJobBanner";
-import JoinWaitlistForm from "@/components/ui/WaitlistForm";
 import NewWaitlistForm from "@/components/ui/NewWaitlist";
 
 const Homepage = () => {
@@ -56,7 +55,6 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* <JoinWaitlistForm /> */}
       <NewWaitlistForm />
 
       {/* Partners */}
