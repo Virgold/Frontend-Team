@@ -57,7 +57,8 @@ const ContactUs = () => {
             form.current.reset();
 
             // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        } catch (_error) {
+        } catch (error) {
+            console.log(error)
             toast({
                 variant: "destructive",
                 title: "Uh oh! Something went wrong.",
